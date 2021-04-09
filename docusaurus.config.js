@@ -1,19 +1,19 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'My Site',
-  tagline: 'The tagline of my site',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'Seedxbo.io Docs',
+  tagline: 'Make the best of your seedbox',
+  url: 'https://docs.seedbox.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'hnielsen-networks', // Usually your GitHub org/user name.
+  projectName: 'seedbox.io', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'My Site',
+      title: 'Seedbox.io',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Seedbox.io Logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -22,12 +22,6 @@ module.exports = {
           activeBasePath: 'docs',
           label: 'Docs',
           position: 'left',
-        },
-        {to: 'blog', label: 'Blog', position: 'left'},
-        {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
         },
       ],
     },
@@ -85,13 +79,7 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+            'https://gitlab.com/hnielsen-networks/docs/seedbox.io/-/tree/master/docs',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
