@@ -17,7 +17,7 @@ pages:
   script:
   - yarn install
   - yarn build
-  - mv ./build ../public
+  - mv ./build ./public
   artifacts:
     paths:
     - public
