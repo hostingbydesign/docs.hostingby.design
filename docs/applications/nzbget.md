@@ -1,0 +1,72 @@
+---
+id: nzbget
+title: nzbGet
+sidebar_label: nzbGet
+---
+
+NZBGet is a binary downloader, which downloads files from Usenet based on information given in nzb-files.
+
+## Initial Setup
+
+First you must connect to your slot via ssh. If you need help connecting to the server, please read the help article [here](../getting-started/how-do-i-connect.md).
+
+Installing nzbGet is easy. Simply issue the following command:
+
+```plaintext main
+box install nzbget
+```
+
+This command will configure nzbgGet for your user.
+
+## How to Access
+
+After installation, you can access nzbGet at the url: `https://<yourhostname.io>/nzbget`
+
+## Service Management
+
+Like all box configured applications, you can manage nzbGet via SSH with box with start, stop, restart, enable and disable commands.
+
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Start-->
+```plaintext
+box start nzbget
+```
+<!--Stop-->
+```plaintext
+box stop nzbget
+```
+<!--Restart-->
+```plaintext
+box restart nzbget
+```
+<!--Enable-->
+```plaintext
+box enable nzbget
+```
+<!--Disable-->
+```plaintext
+box disable nzbget
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+## Configuration
+
+If you are unfamiliar with nzbGet, please check out their [documentation](https://nzbget.net/documentation) for assistance in getting your news groups setup or learning how to setup post-processing.
+
+## Connect to other clients
+
+The general settings for connecting nzbget to other clients are as follows:
+
+```bash
+Host: 127.0.0.1
+Control Port: 443
+URL Base: nzbget
+SSL: ON
+Username: <your slot username>
+Password: <your slot password>
+```
+
+:::tip Tip
+In some applications, such as Sonarr and Radarr, you may need to enable **Advanced Settings** to see the option to change **URL Base**.
+:::
+

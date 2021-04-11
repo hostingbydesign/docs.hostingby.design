@@ -1,0 +1,84 @@
+---
+id: jackett
+title: Jackett
+sidebar_label: Jackett
+---
+
+API support for your favourite torrent trackers.
+
+## Initial Setup
+
+First you must connect to your slot via ssh. If you need help connecting to the server, please read the help article [here](../getting-started/how-do-i-connect.md).
+
+Installing Jackett is easy. Simply issue the following command:
+
+```plaintext main
+box install jackett
+```
+
+This command will configure jackett for your user. When finished, the installer will display the port that has been configured for Jackett. Don't forget this! This port will be important when you connect applications such as [Sonarr](sonarr.md) and [Radarr](radarr.md) to the trackers you have setup in Jackett.
+
+## How to Access
+
+After installation, you can access the web client at `https://<hostname.io>/jackett`. When prompted for an admin password, simply enter your slot password. This double authentication layer is necessary because your jackett port has been exposed externally -- if you disabled the password authentication, your configuration and tracker information would be publically accessible.
+
+## Service Management
+
+Like all box configured applications, you can manage Jackett via SSH with box with start, stop, restart, enable and disable commands.
+
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Start-->
+```plaintext
+box start jackett
+```
+<!--Stop-->
+```plaintext
+box stop jackett
+```
+<!--Restart-->
+```plaintext
+box restart jackett
+```
+<!--Enable-->
+```plaintext
+box enable jackett
+```
+<!--Disable-->
+```plaintext
+box disable jackett
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+## Configuration
+
+To add a new tracker to Jackett, click the `Add Indexer` button near the top of the page. There should be some instructions to help you get Jackett set up with the tracker you've specified.
+
+Since every tracker is different in how they accept connections through their API, you should refer to your tracker if you need specific help in setting up an Indexer.
+
+:::caution
+Please do not touch the following settings:
+- Admin password (you can change, but do not remove)
+- Base URL
+- Server Port
+- External access (leave enabled)
+:::
+
+## Connect to other clients
+
+In order to connect Jackett with other trackers, you need to connect directly to the port. You must bypass the webserver because it has authentication headers which are not supported when accessing Jackett from other clients. If you need help in constructing your URL for a tracker, please refer to the example below.
+
+:::tip
+Remember your port from installtion? If you have forgotten it, you can find it in your Jackett dashboard.
+:::
+
+Now, click `Copy Torznab Feed`. The link you'll receive will look something like this:
+
+```plaintext
+https://app02.seedbox.io/jackett/api/v2.0/indexers/yourtracker/results/torznab/
+```
+
+We need to edit this link to **remove https** and **add the port number**. Thus, if your port number was `12345`, your editted URL would look like this:
+
+```plaintext
+http://app02.seedbox.io:12345/jackett/api/v2.0/indexers/yourtracker/results/torznab/
+```

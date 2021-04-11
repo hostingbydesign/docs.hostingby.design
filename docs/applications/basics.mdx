@@ -1,0 +1,60 @@
+---
+id: application-basics
+title: Application Basics
+sidebar_label: Basics
+---
+
+In the following section, you can learn more about the applications offered by the Seedbox.io installer, how to install them and configure them for use with other applications provided by box.
+
+:::caution
+Many applications offer a significant array of configuration options. Most of them won't be covered in the following pages. Rather, you should read the wikis and manual pages for the applications in question to understand the full breadth of the options available.
+
+That said, when looking over the options, **you should never adjust variables such as `URL Base`, `Bind IP` and `Port`**. Doing so may break the integration with your services and may result in broken packages.
+:::
+
+## Installation and Removal
+For all packages managed by box, the command to install a package is:
+
+```bash
+box install <package name>
+```
+Packages can also be removed with the command:
+
+```bash
+box remove <package name>
+```
+
+:::warning
+Please be aware that removing a package will remove **all** associated data with that application. This operation cannot be undone.
+:::
+
+## Service Management
+
+All box configured applications can be managed with start, stop, restart, enable and disable commands.
+
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Start-->
+```plaintext
+box start btsync
+```
+<!--Stop-->
+```plaintext
+box stop btsync
+```
+<!--Restart-->
+```plaintext
+box restart btsync
+```
+<!--Enable-->
+```plaintext
+box enable btsync
+```
+<!--Disable-->
+```plaintext
+box disable btsync
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+:::tip
+Enable and disable refer to whether or not the package should be started when the server is booted. `enable` means start at boot and `disable` means remove it auto start entries.
+:::

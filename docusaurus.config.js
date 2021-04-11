@@ -1,25 +1,25 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'Seedxbo.io Docs',
+  title: 'Seedbox.io Docs',
   tagline: 'Make the best of your seedbox',
   url: 'https://docs.seedbox.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.png',
   organizationName: 'hnielsen-networks', // Usually your GitHub org/user name.
   projectName: 'seedbox.io', // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'Seedbox.io',
+      title: '',
       logo: {
         alt: 'Seedbox.io Logo',
-        src: 'img/logo.svg',
+        src: 'img/logo.png',
       },
       items: [
         {
-          to: 'docs/',
-          activeBasePath: 'docs',
+          to: '/',
+          activeBasePath: '/',
           label: 'Docs',
           position: 'left',
         },
@@ -28,45 +28,6 @@ module.exports = {
     footer: {
       style: 'dark',
       links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Getting Started',
-              to: 'docs/',
-            },
-          ],
-        },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: 'blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
-          ],
-        },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} HNielsen Networks.`,
     },
@@ -77,9 +38,9 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
           editUrl:
             'https://gitlab.com/hnielsen-networks/docs/seedbox.io/-/tree/master/docs',
+          routeBasePath: '/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),

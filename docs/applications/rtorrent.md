@@ -1,0 +1,119 @@
+---
+id: rtorrent
+title: rTorrent
+sidebar_label: rTorrent
+---
+
+rTorrent is a console-based BitTorrent client, based on the libTorrent libraries for Unix.
+
+## Initial Setup
+
+First you must connect to your slot via ssh. If you need help connecting to the server, please read the help article [here](../getting-started/how-do-i-connect.md).
+
+Installing rTorrent is easy. Simply issue the following command:
+
+```plaintext main
+box install rtorrent
+```
+This command will configure rTorrent and ruTorrent for use on your slot.
+
+## How to Access
+
+Once rTorrent has been installed, you can either choose to access and command rTorrent from either the web-gui (ruTorrent) or the curses gui. The curses gui is considered "advanced" and not many users will opt for this option.
+
+### ruTorrent
+To access the web-gui of rTorrent, simply append /rutorrent to the hostname of the machine you've been provisioned on, for example: `https://<hostname.io>/rutorrent`.
+
+### Command Line
+
+rTorrent runs as a daemon thanks to the screen application. Thus, in order to connect to the curses UI, you simply need to attach to the running screen. For all users, the rtorrent screen is simply named rtorrent. In order to connect to the rtorrent screen session, simply issue the command:
+```bash main
+screen -r rtorrent
+```
+When done with the session, do not quit rTorrent. Rather, you should detach from the screen, so that rTorrent remains running in the background.
+
+To do this, press the keys: `ctrl-a, ctrl-d`
+
+You will be returned to the command line and you screen will remain running in the background.
+
+For help on using the curses UI, check the rTorrent user guide: [here](https://github.com/rakshasa/rtorrent/wiki/User-Guide).
+
+## Service Management
+
+Like all box configured applications, you can manage rTorrent via SSH with box with start, stop, restart, enable and disable commands
+
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Start-->
+```plaintext
+box start rtorrent
+```
+<!--Stop-->
+```plaintext
+box stop rtorrent
+```
+<!--Restart-->
+```plaintext
+box restart rtorrent
+```
+<!--Enable-->
+```plaintext
+box enable rtorrent
+```
+<!--Disable-->
+```plaintext
+box disable rtorrent
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+## Configuration
+
+The configuration of rTorrent is a file that lives in your home folder called .rtorrent.rc. There are not many reasons you should need to edit this file (and please note that many of the options should not be reconfigured (such as: ip, bind, network.scgi.open_local), otherwise, you may find that your client has stopped working.
+
+## Connect to other clients
+
+Generally speaking, most of the other clients connect to rTorrent, not the other way around. There are typically two ways to connect a client to rTorrent: RPC mounts and Unix Sockets.
+
+### Unix Sockets
+Rather than exposing a local, insecure TCP port the rTorrent client creates a socket that can only be listened to by your own user.
+
+This socket lives at:
+
+`/run/<username>/.rtorrent.sock`
+
+If you were inputting this to a program, you need to prepend the unix:// protocol designation, thus your final socket may look something like:
+
+`unix:///run/liara/.rtorrent.sock`
+
+### RPC Mounts
+
+An RPC mount is an interface created by the webserver (nginx) to speak directly to the unix socket on the system. There are currently two ways to connect to the RPC socket: through ruTorrent or through an RPC layer created for your user by the webserver. In all cases, the mount is protected by basic nginx authentication measures to protect the mount from unauthorized access. To connect to the RPC mount from a local client use the following details:
+
+```plaintext main
+Host: 127.0.0.1
+Port: 443
+SSL: ON
+Username: <your username>
+Password: <your password>
+RPC Mount: /<username> OR /rutorrent/plugins/httprpc/action.php
+```
+
+Both of the RPC mounts behave exactly the same, though if you're on a mobile connection (i.e. for Transdrone), it may be preferrable to use the ruTorrent plugin version of the mount as it will probably be a bit more friendly to your data usage. The nginx mount point was simply created to provide an easy to remember way to provide access to your rTorrent slot.
+
+### Transdroid/Transdrone
+
+Should you wish to connect your rTorrent instance to the mobile application Transdrone, use the following settings:
+
+```plaintext main
+Name: rtorrent (or whatever you like)
+Server type: rtorrent
+IP or host name: <the hostname of your server>
+Username: <your username>
+Password: <your password>
+Advanced Settings:
+    SCGI mount point: /rutorrent/plugins/httprpc/action.php OR /<username>
+    Use SSL: ON
+```
+
+:::note
+You may prefer to access the SCGI mount from the ruTorrent plugin over a mobile connection as the httprpc plugin has been configured to utilize compression and therefore, less data.
+:::

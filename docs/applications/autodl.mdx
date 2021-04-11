@@ -1,0 +1,68 @@
+---
+id: autodl
+title: Autodl
+sidebar_label: Autodl
+---
+
+autodl-irssi is a plugin for irssi that monitors IRC announce channels and downloads torrent files based on user-defined filters.
+
+## Initial Setup
+
+First you must connect to your slot via ssh. If you need help connecting to the server, please read the help article [here](../getting-started/how-do-i-connect.md).
+
+Installing autodl is easy. Simply issue the following command:
+
+```plaintext main
+box install autodl
+```
+
+This command will configure autodl and the associated ruTorrent plugin.
+
+## How to Access
+
+Autodl is a plugin for the console IRC client, `irssi`. Thus, autodl doesn't have a graphical user interface of its own. You can either add rules with the ruTorrent plugin (the only GUI option), or write them by hand in the file: `~/.autodl/autodl.cfg`
+
+You can attach directly to the running irssi screen with:
+
+```bash main
+screen -r irssi
+```
+To detach again, press: `control-a, control-d`
+
+## Service Management
+
+Like all box configured applications, you can manage autodl via SSH with box with start, stop, restart, enable and disable commands.
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+<Tabs
+  defaultValue="Start"
+  values={[
+    {label: 'Start', value: 'Start'},
+    {label: 'Stop', value: 'Stop'},
+    {label: 'Restart', value: 'Restart'},
+    {label: 'Enable', value: 'Enable'},
+    {label: 'Disable', value: 'Disable'},
+  ]}>
+  <TabItem value="Start">
+    ```plaintext box start autodl ```
+  </TabItem>
+  <TabItem value="Stop">
+    ```plaintext box stop autodl ```
+  </TabItem>
+  <TabItem value="Restart">
+    ```plaintext box restart autodl ``` 
+  </TabItem>
+  <TabItem value="Enable">
+    ```plaintext box enable autodl ``` 
+  </TabItem>
+  <TabItem value="Disable">
+    ```plaintext box disable autodl ``` 
+  </TabItem>
+</Tabs>;
+
+## Configuration
+
+Configuration options for the GUI client can be found [here](https://code.google.com/archive/p/rutorrent/wikis/PluginAutodlirssi.wiki#Usage). The options will be found under the header "Usage".
+
+If you don't want to use the ruTorrent plugin and would prefer to configure the configuration files by hand, you can read the [autodl-irssi documentation](https://autodl-community.github.io/autodl-irssi/configuration/overview/) for an in-depth review of the available options.

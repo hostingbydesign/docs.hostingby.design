@@ -1,0 +1,128 @@
+---
+id: wireguard
+title: Wireguard
+sidebar_label: Wireguard
+---
+
+WireGuard is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography
+
+## Initial Setup
+
+First you must connect to your slot via ssh. If you need help connecting to the server, please read the help article [here](../getting-started/how-do-i-connect.md).
+
+Installing wireguard is easy. Simply issue the following command:
+
+```plaintext main
+box install wireguard
+```
+
+This command will configure wireguard for your user. When install finished, the installer will output the configuration for your user. This is an example configuration:
+
+```plaintext main
+[Interface]
+Address = 10.100.0.2
+PrivateKey = {averysecretkey}
+ListenPort = 21841
+
+[Peer]
+PublicKey = {apublickey}
+Endpoint = {shared/dedicated IP}:{port}
+AllowedIPs = 0.0.0.0/0
+
+# This is for if you're behind a NAT and
+# want the connection to be kept alive.
+#PersistentKeepalive = 25
+```
+
+## How to Access
+
+### Client Install
+In order to use the Wireguard tunnel, you'll need to install the client on your local computer or mobile phone. In order to get started, please check the [Wireguard site](https://www.wireguard.com/install/) for help on installing Wireguard on the operating system of your choice.
+
+:::note
+If you prefer, and alternate client called [TunSafe](https://tunsafe.com/download) exists and is already a bit more mature than the official Wireguard client for Windows. **While the client itself is open-source and developed by a community member with prior credibility, it bears mentioning that using this client completely, 100% at your own risk as it is not developed or maintained by the Wireguard team. You have been warned.**
+:::
+
+### Client Setup
+
+Wireguard is available on many platforms. Setting it up for use with your Seedbox.io configuration should be fairly straight-forward, but in case you need a littl help getting your client setup, here are some instructions for popular operating systems.
+
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Linux / OS X-->
+:::panel
+1. Simply copy-paste the configuration file outputted at the end of the server setup into a file in /etc/wireguard.
+```bash
+sudo nano /etc/wireguard/wg0.conf
+sudo chmod 600 /etc/wireguard/wg0.conf
+sudo wg-quick up wg0
+```
+2. Wireguard should now be up and tunnelling all you traffic through Seedbox.io.
+3. [Check your IP Address](https://duckduckgo.com/?q=ip+address&ia=answer). It should now reflect your shared or dedicated IP for your slot.
+
+4. On Linux systems, you can configure a systemd service to automatically run and enable this configuration on each boot:
+```bash
+sudo systemctl enable wg-quick@wg0
+```
+:::
+<!--Windows-->
+:::panel
+1. Copy-paste the contents of the client configuration outputted at the end of configuration into a file onto your local desktop,eg: `Seedbox.io.conf.d`
+
+2. Open TunSafe, click and drag the configuration file you just created to the TunSafe window. TunSafe will automatically import the client configuration and connect. Easy!
+
+3. [Check your IP Address](https://duckduckgo.com/?q=ip+address&ia=answer). It should now reflect your shared or dedicated IP for your slot.
+:::
+<!--Android-->
+:::panel
+Configuration is easiest if you use utilize the QR Encode function.
+
+1. Connect to your server from a computer and issue the commands:
+```bash
+u=$(whoami)
+qrencode -t ansiutf8 < ~/.wireguard/$u.conf
+```
+2. In your client on your phone, add a new tunnel and chose the `QR Code` option. Scan the QR code which was generated in your terminal.
+3. Enable the tunnel by ticking the switch.
+4. [Check your IP Address](https://duckduckgo.com/?q=ip+address&ia=answer).
+:::
+<!--iOS-->
+:::panel
+Configuration is easiest if you use utilize the QR Encode function.
+
+1. Connect to your server from a computer and issue the commands:
+```bash
+u=$(whoami)
+qrencode -t ansiutf8 < ~/.wireguard/$u.conf
+```
+2. In your client on your phone, add a new tunnel and chose the `QR Code` option. Scan the QR code which was generated in your terminal.
+3. Enable the tunnel by ticking the switch.
+4. [Check your IP Address](https://duckduckgo.com/?q=ip+address&ia=answer).
+:::
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+## Service Management
+
+Like all box configured applications, you can manage Wireguard via SSH with box with start, stop, restart, enable and disable commands.
+
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Start-->
+```plaintext
+box start wireguard
+```
+<!--Stop-->
+```plaintext
+box stop wireguard
+```
+<!--Restart-->
+```plaintext
+box restart wireguard
+```
+<!--Enable-->
+```plaintext
+box enable wireguard
+```
+<!--Disable-->
+```plaintext
+box disable wireguard
+```
+<!--END_DOCUSAURUS_CODE_TABS-->

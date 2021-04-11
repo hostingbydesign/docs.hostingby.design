@@ -1,0 +1,83 @@
+---
+id: sabnzbd
+title: SABnzbd
+sidebar_label: SABnzbd
+---
+
+SABnzbd is an Open Source Binary Newsreader written in Python.
+
+## Initial Setup
+
+First you must connect to your slot via ssh. If you need help connecting to the server, please read the help article [here](../getting-started/how-do-i-connect.md).
+
+Installing SABnzbd is easy. Simply issue the following command:
+
+```plaintext main
+box install sabnzbd
+```
+
+This command will configure SABnzbd for your user.
+
+## How to Access
+
+After installation, you can access SABnzbd at the url: `https://<yourhostname.io>/username/sabnzbd/`
+
+The first time after installing SABnzbd, you'll be greated by a simple setup wizard.
+
+## Upgrading SABnzbd
+
+Since SABnzbd doesn't use any sort of internal update mechanism, you must check from time to time for updates. You can do this with the command:
+
+```plaintext main
+box upgrade sabnzbd
+```
+
+## Service Management
+
+Like all box configured applications, you can manage SABnzbd via SSH with box with start, stop, restart, enable and disable commands.
+
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Start-->
+```plaintext
+box start sabnzbd
+```
+<!--Stop-->
+```plaintext
+box stop sabnzbd
+```
+<!--Restart-->
+```plaintext
+box restart sabnzbd
+```
+<!--Enable-->
+```plaintext
+box enable sabnzbd
+```
+<!--Disable-->
+```plaintext
+box disable sabnzbd
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+## Configuration
+
+If you are unfamiliar with SABnzbd, please check out their [documentation](https://sabnzbd.org/wiki/) for assistance in getting your news groups setup or learning how to setup post-processing.
+
+## Connect to other clients
+
+The general settings for connecting SABnzbd to other clients are as follows:
+
+```plaintext main
+Host: 127.0.0.1
+Control Port: 443
+URL Base: /USERNAME/sabnzbd
+API Key: Found in Settings > General
+Username: <your slot username>
+Password: <your slot password>
+SSL: ON
+```
+
+:::tip Tip
+In some applications, such as Sonarr and Radarr, you may need to enable **Advanced Settings** to see the option to change **URL Base**.
+:::
+

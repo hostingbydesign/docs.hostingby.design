@@ -1,0 +1,54 @@
+---
+id: btsync
+title: Resilio (bt)Sync
+sidebar_label: Resilio (bt)Sync
+---
+
+Resilio Sync (formerly BitTorrent Sync) is a peer-to-peer file synchronization tool available for Windows, Mac, Linux, Android, iOS, Windows Phone, Amazon Kindle Fire and BSD. It can sync files between devices on a local network, or between remote devices over the Internet via a modified version of the BitTorrent protocol. 
+
+## Initial Setup
+
+First you must connect to your slot via ssh. If you need help connecting to the server, please read the help article [here](../getting-started/how-do-i-connect.md).
+
+Installing Resilio is easy. Simply issue the following command:
+
+```plaintext main
+box install btsync
+```
+
+This command will configure btsync for your user.
+
+## How to Access
+
+After Resilio Sync has been configured for your user, the application can be accessed from your web browser at `https://<domain.io>/btsync`
+
+## Service Management
+
+Like all box configured applications, you can manage btsync via SSH with box with start, stop, restart, enable and disable commands.
+
+<!--DOCUSAURUS_CODE_TABS-->
+<!--Start-->
+```plaintext
+box start btsync
+```
+<!--Stop-->
+```plaintext
+box stop btsync
+```
+<!--Restart-->
+```plaintext
+box restart btsync
+```
+<!--Enable-->
+```plaintext
+box enable btsync
+```
+<!--Disable-->
+```plaintext
+box disable btsync
+```
+<!--END_DOCUSAURUS_CODE_TABS-->
+
+## Configuration & Usage
+
+The Resilio Sync user guide can be found [here](https://help.resilio.com/hc/en-us/categories/200140177-Get-started-with-Sync)
