@@ -12,7 +12,7 @@ Connecting to your slot via Linux or OSX is trivial:
 1. Open a terminal
 2. Type: `ssh <username>@<hostname>`
 
-    eg: `ssh liara@app02.seedbox.io`
+    eg: `ssh dan@app02.seedbox.io`
 
 3. You may receive a warning about the host key. Type "yes" to verify.
 4. Enter your password
@@ -41,5 +41,5 @@ individual files in /usr/share/doc/*/copyright.
 
 Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
 permitted by applicable law.
-liara@---:~$ 
+Dan@---:~$ 
 ```

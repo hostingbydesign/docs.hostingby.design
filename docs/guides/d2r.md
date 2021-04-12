@@ -62,8 +62,8 @@ cd bin
 Grab the supporting scripts and set execute permissions:
 
 ```
-wget https://raw.githubusercontent.com/liaralabs/kb-scripts/master/deluge-to-rtorrent/d2r.sh
-wget https://raw.githubusercontent.com/liaralabs/kb-scripts/master/deluge-to-rtorrent/rfr.pl
+wget https://raw.githubusercontent.com/Danlabs/kb-scripts/master/deluge-to-rtorrent/d2r.sh
+wget https://raw.githubusercontent.com/Danlabs/kb-scripts/master/deluge-to-rtorrent/rfr.pl
 chmod +x d2r.sh
 chmod +x rfr.pl
 ```

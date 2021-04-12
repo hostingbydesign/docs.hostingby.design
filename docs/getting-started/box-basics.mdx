@@ -51,28 +51,9 @@ box chpasswd
 
 ## Service Management
 You can manipulate service status with `start/stop/restart/enble/disable`. These commands will send the info straight to `systemctl`
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Start-->
-```plaintext
-box start wireguard
-```
-<!--Stop-->
-```plaintext
-box stop wireguard
-```
-<!--Restart-->
-```plaintext
-box restart wireguard
-```
-<!--Enable-->
-```plaintext
-box enable wireguard
-```
-<!--Disable-->
-```plaintext
-box disable wireguard
-```
-<!--END_DOCUSAURUS_CODE_TABS-->
+import SystemdTabs from '../snippets/systemdtabs.mdx';
+
+<SystemdTabs service="wireguard"/>
 
 ## bw
 You can get a picture of your current bandwidth usage for the month with this command.

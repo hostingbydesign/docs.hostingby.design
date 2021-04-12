@@ -47,8 +47,8 @@ If you prefer, and alternate client called [TunSafe](https://tunsafe.com/downloa
 
 Wireguard is available on many platforms. Setting it up for use with your Seedbox.io configuration should be fairly straight-forward, but in case you need a littl help getting your client setup, here are some instructions for popular operating systems.
 
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Linux / OS X-->
+
+#### Linux / OS X
 :::panel
 1. Simply copy-paste the configuration file outputted at the end of the server setup into a file in /etc/wireguard.
 ```bash
@@ -64,7 +64,7 @@ sudo wg-quick up wg0
 sudo systemctl enable wg-quick@wg0
 ```
 :::
-<!--Windows-->
+#### Windows
 :::panel
 1. Copy-paste the contents of the client configuration outputted at the end of configuration into a file onto your local desktop,eg: `Seedbox.io.conf.d`
 
@@ -72,7 +72,7 @@ sudo systemctl enable wg-quick@wg0
 
 3. [Check your IP Address](https://duckduckgo.com/?q=ip+address&ia=answer). It should now reflect your shared or dedicated IP for your slot.
 :::
-<!--Android-->
+#### Android
 :::panel
 Configuration is easiest if you use utilize the QR Encode function.
 
@@ -85,7 +85,7 @@ qrencode -t ansiutf8 < ~/.wireguard/$u.conf
 3. Enable the tunnel by ticking the switch.
 4. [Check your IP Address](https://duckduckgo.com/?q=ip+address&ia=answer).
 :::
-<!--iOS-->
+#### iOS
 :::panel
 Configuration is easiest if you use utilize the QR Encode function.
 
@@ -98,31 +98,11 @@ qrencode -t ansiutf8 < ~/.wireguard/$u.conf
 3. Enable the tunnel by ticking the switch.
 4. [Check your IP Address](https://duckduckgo.com/?q=ip+address&ia=answer).
 :::
-<!--END_DOCUSAURUS_CODE_TABS-->
 
 ## Service Management
 
 Like all box configured applications, you can manage Wireguard via SSH with box with start, stop, restart, enable and disable commands.
 
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Start-->
-```plaintext
-box start wireguard
-```
-<!--Stop-->
-```plaintext
-box stop wireguard
-```
-<!--Restart-->
-```plaintext
-box restart wireguard
-```
-<!--Enable-->
-```plaintext
-box enable wireguard
-```
-<!--Disable-->
-```plaintext
-box disable wireguard
-```
-<!--END_DOCUSAURUS_CODE_TABS-->
+import SystemdTabs from '../snippets/systemdtabs.mdx';
+
+<SystemdTabs service="wireguard"/>
