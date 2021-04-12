@@ -26,28 +26,9 @@ After installation, Ombi will be availabe at the following web address: `https:/
 
 Like all box configured applications, you can manage Ombi via SSH with box with start, stop, restart, enable and disable commands.
 
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Start-->
-```plaintext
-box start ombi
-```
-<!--Stop-->
-```plaintext
-box stop ombi
-```
-<!--Restart-->
-```plaintext
-box restart ombi
-```
-<!--Enable-->
-```plaintext
-box enable ombi
-```
-<!--Disable-->
-```plaintext
-box disable ombi
-```
-<!--END_DOCUSAURUS_CODE_TABS-->
+import SystemdTabs from '../snippets/systemdtabs.mdx';
+
+<SystemdTabs service="ombi"/>
 
 ## Configuration
 
@@ -57,8 +38,7 @@ If you have further questions about settings and configurations of Ombi, please 
 
 ## Connect to other clients
 
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Sonarr-->
+### Sonarr
 :::panel
 1. Select Sonarr from the TV Dropdown under settings.
 2. In order to configure Sonarr, you must first have a root folder setup. If you haven't set up any root folders in Sonarr, please add a show and setup your Sonarr root show directory first.
@@ -75,7 +55,7 @@ Base URL: sonarr
 6. Submit
 
 :::
-<!--Medusa-->
+### Medusa
 :::panel
 1. Select SickRage from the TV Dropdown under settings.
 2. Use the following configuration:
@@ -89,7 +69,7 @@ Base URL: medusa
 3. Choose a default quality profile.
 4. Submit
 :::
-<!--Radarr-->
+### Radarr
 :::panel
 1. Select Radarr from the Movie Dropdown under settings.
 2. In order to configure Radarr, you must first have a root folder setup. If you haven't set up any root folders in Radarr, please add a show and setup your Sonarr root show directory first.
@@ -106,7 +86,6 @@ Base URL: radarr
 6. Submit
 
 :::
-<!--END_DOCUSAURUS_CODE_TABS-->
 
 :::tip
 In order to connect Ombi to the clients above, you'll need your subnet IP. You can find this on your panel or with the command `cat ~/.install/subnet.lock`

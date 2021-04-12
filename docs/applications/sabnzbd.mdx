@@ -36,28 +36,9 @@ box upgrade sabnzbd
 
 Like all box configured applications, you can manage SABnzbd via SSH with box with start, stop, restart, enable and disable commands.
 
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Start-->
-```plaintext
-box start sabnzbd
-```
-<!--Stop-->
-```plaintext
-box stop sabnzbd
-```
-<!--Restart-->
-```plaintext
-box restart sabnzbd
-```
-<!--Enable-->
-```plaintext
-box enable sabnzbd
-```
-<!--Disable-->
-```plaintext
-box disable sabnzbd
-```
-<!--END_DOCUSAURUS_CODE_TABS-->
+import SystemdTabs from '../snippets/systemdtabs.mdx';
+
+<SystemdTabs service="sabnzbd"/>
 
 ## Configuration
 

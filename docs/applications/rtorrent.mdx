@@ -42,28 +42,9 @@ For help on using the curses UI, check the rTorrent user guide: [here](https://g
 
 Like all box configured applications, you can manage rTorrent via SSH with box with start, stop, restart, enable and disable commands
 
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Start-->
-```plaintext
-box start rtorrent
-```
-<!--Stop-->
-```plaintext
-box stop rtorrent
-```
-<!--Restart-->
-```plaintext
-box restart rtorrent
-```
-<!--Enable-->
-```plaintext
-box enable rtorrent
-```
-<!--Disable-->
-```plaintext
-box disable rtorrent
-```
-<!--END_DOCUSAURUS_CODE_TABS-->
+import SystemdTabs from '../snippets/systemdtabs.mdx';
+
+<SystemdTabs service="rtorrent"/>
 
 ## Configuration
 
@@ -82,7 +63,7 @@ This socket lives at:
 
 If you were inputting this to a program, you need to prepend the unix:// protocol designation, thus your final socket may look something like:
 
-`unix:///run/liara/.rtorrent.sock`
+`unix:///run/Dan/.rtorrent.sock`
 
 ### RPC Mounts
 

@@ -33,33 +33,9 @@ To detach again, press: `control-a, control-d`
 
 Like all box configured applications, you can manage autodl via SSH with box with start, stop, restart, enable and disable commands.
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-<Tabs
-  defaultValue="Start"
-  values={[
-    {label: 'Start', value: 'Start'},
-    {label: 'Stop', value: 'Stop'},
-    {label: 'Restart', value: 'Restart'},
-    {label: 'Enable', value: 'Enable'},
-    {label: 'Disable', value: 'Disable'},
-  ]}>
-  <TabItem value="Start">
-    ```plaintext box start autodl ```
-  </TabItem>
-  <TabItem value="Stop">
-    ```plaintext box stop autodl ```
-  </TabItem>
-  <TabItem value="Restart">
-    ```plaintext box restart autodl ``` 
-  </TabItem>
-  <TabItem value="Enable">
-    ```plaintext box enable autodl ``` 
-  </TabItem>
-  <TabItem value="Disable">
-    ```plaintext box disable autodl ``` 
-  </TabItem>
-</Tabs>;
+import SystemdTabs from '../snippets/systemdtabs.mdx';
+
+<SystemdTabs service="autodl"/>
 
 ## Configuration
 

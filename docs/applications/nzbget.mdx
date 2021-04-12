@@ -26,28 +26,9 @@ After installation, you can access nzbGet at the url: `https://<yourhostname.io>
 
 Like all box configured applications, you can manage nzbGet via SSH with box with start, stop, restart, enable and disable commands.
 
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Start-->
-```plaintext
-box start nzbget
-```
-<!--Stop-->
-```plaintext
-box stop nzbget
-```
-<!--Restart-->
-```plaintext
-box restart nzbget
-```
-<!--Enable-->
-```plaintext
-box enable nzbget
-```
-<!--Disable-->
-```plaintext
-box disable nzbget
-```
-<!--END_DOCUSAURUS_CODE_TABS-->
+import SystemdTabs from '../snippets/systemdtabs.mdx';
+
+<SystemdTabs service="nzbget"/>
 
 ## Configuration
 

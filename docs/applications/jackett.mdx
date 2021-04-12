@@ -26,28 +26,9 @@ After installation, you can access the web client at `https://<hostname.io>/jack
 
 Like all box configured applications, you can manage Jackett via SSH with box with start, stop, restart, enable and disable commands.
 
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Start-->
-```plaintext
-box start jackett
-```
-<!--Stop-->
-```plaintext
-box stop jackett
-```
-<!--Restart-->
-```plaintext
-box restart jackett
-```
-<!--Enable-->
-```plaintext
-box enable jackett
-```
-<!--Disable-->
-```plaintext
-box disable jackett
-```
-<!--END_DOCUSAURUS_CODE_TABS-->
+import SystemdTabs from '../snippets/systemdtabs.mdx';
+
+<SystemdTabs service="jackett"/>
 
 ## Configuration
 

@@ -26,28 +26,9 @@ After installation, you can access Medusa at the url: `https://<yourhostname.io>
 
 Like all box configured applications, you can manage Medusa via SSH with box with start, stop, restart, enable and disable commands.
 
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Start-->
-```plaintext
-box start medusa
-```
-<!--Stop-->
-```plaintext
-box stop medusa
-```
-<!--Restart-->
-```plaintext
-box restart medusa
-```
-<!--Enable-->
-```plaintext
-box enable medusa
-```
-<!--Disable-->
-```plaintext
-box disable medusa
-```
-<!--END_DOCUSAURUS_CODE_TABS-->
+import SystemdTabs from '../snippets/systemdtabs.mdx';
+
+<SystemdTabs service="medusa"/>
 
 ## Configuration
 
@@ -55,8 +36,7 @@ If you are unfamiliar with Medusa, please check out their [wiki](https://github.
 
 ## Connect to other clients
 
-<!--DOCUSAURUS_CODE_TABS-->
-<!--rTorrent-->
+### rTorrent
 ```plaintext
 Send torrent files to: rTorrent
 rTorrent host/port: https://127.0.0.1/rutorrent/plugins/httprpc/action.php
@@ -68,7 +48,7 @@ Add label to torrent: TV (or anything else you desire)
 Downloaded files location: ~/torrents/rtorrent (or a custom directory)
 ```
 
-<!--Deluge (via Daemon)-->
+### Deluge (via Daemon)
 ```plaintext
 Send torrent files to: Deluge (via Daemon)
 Deluge: 127.0.0.1:<your daemon port>
@@ -79,7 +59,7 @@ Add label to torrent: TV (or anything else you desire)
 * label plugin must be enabled in Deluge if you add a label
 ```
 
-<!--Deluge (via Web)-->
+### Deluge (via Web)
 ```plaintext
 Send torrent files to: Deluge (via Web)
 Deluge: 127.0.0.1:<your web port>
@@ -89,7 +69,7 @@ Add label to torrent: TV (or anything else you desire)
 * label plugin must be enabled in Deluge if you add a label
 ```
 
-<!--nzbGet-->
+### NZBget
 ```plaintext
 Send nzb files to: nzbget
 NZBget host:port: 127.0.0.1/nzbget
@@ -99,4 +79,3 @@ nzbget Password: <your password>
 Add label to torrent: Series (or anything else you desire)
 * label must exist under "Categories" in nzbGet
 ```
-<!--END_DOCUSAURUS_CODE_TABS-->

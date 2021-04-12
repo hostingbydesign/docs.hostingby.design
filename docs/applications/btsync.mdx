@@ -26,28 +26,9 @@ After Resilio Sync has been configured for your user, the application can be acc
 
 Like all box configured applications, you can manage btsync via SSH with box with start, stop, restart, enable and disable commands.
 
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Start-->
-```plaintext
-box start btsync
-```
-<!--Stop-->
-```plaintext
-box stop btsync
-```
-<!--Restart-->
-```plaintext
-box restart btsync
-```
-<!--Enable-->
-```plaintext
-box enable btsync
-```
-<!--Disable-->
-```plaintext
-box disable btsync
-```
-<!--END_DOCUSAURUS_CODE_TABS-->
+import SystemdTabs from '../snippets/systemdtabs.mdx';
+
+<SystemdTabs service="btsync"/>
 
 ## Configuration & Usage
 

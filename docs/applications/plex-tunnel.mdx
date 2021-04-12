@@ -41,25 +41,6 @@ Once the tunnel has been created, you'll no longer be able to access Plex from t
 
 Like all box configured applications, you can the tunnel via SSH with box with start, stop, restart, enable and disable commands.
 
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Start-->
-```plaintext
-box start plex-tunnel
-```
-<!--Stop-->
-```plaintext
-box stop plex-tunnel
-```
-<!--Restart-->
-```plaintext
-box restart plex-tunnel
-```
-<!--Enable-->
-```plaintext
-box enable plex-tunnel
-```
-<!--Disable-->
-```plaintext
-box disable plex-tunnel
-```
-<!--END_DOCUSAURUS_CODE_TABS-->
+import SystemdTabs from '../snippets/systemdtabs.mdx';
+
+<SystemdTabs service="plex-tunnel"/>

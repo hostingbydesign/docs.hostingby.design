@@ -26,28 +26,9 @@ Once Tautulli has been installed, you can access it from your browser at `https:
 
 Like all box configured applications, you can manage Tautulli via SSH with box with start, stop, restart, enable and disable commands.
 
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Start-->
-```plaintext
-box start plexpy
-```
-<!--Stop-->
-```plaintext
-box stop plexpy
-```
-<!--Restart-->
-```plaintext
-box restart plexpy
-```
-<!--Enable-->
-```plaintext
-box enable plexpy
-```
-<!--Disable-->
-```plaintext
-box disable plexpy
-```
-<!--END_DOCUSAURUS_CODE_TABS-->
+import SystemdTabs from '../snippets/systemdtabs.mdx';
+
+<SystemdTabs service="tautulli"/>
 
 ## Configuration
 

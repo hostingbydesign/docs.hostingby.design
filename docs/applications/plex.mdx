@@ -46,28 +46,9 @@ If you forgot your personalized port, you can always access Plex from the "Plex"
 
 Like all box configured applications, you can manage Plex via SSH with box with start, stop, restart, enable and disable commands.
 
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Start-->
-```plaintext
-box start plex
-```
-<!--Stop-->
-```plaintext
-box stop plex
-```
-<!--Restart-->
-```plaintext
-box restart plex
-```
-<!--Enable-->
-```plaintext
-box enable plex
-```
-<!--Disable-->
-```plaintext
-box disable plex
-```
-<!--END_DOCUSAURUS_CODE_TABS-->
+import SystemdTabs from '../snippets/systemdtabs.mdx';
+
+<SystemdTabs service="plex"/>
 
 ## Configuration
 
@@ -90,15 +71,14 @@ If you skipped claiming of your Plex server during installation, you can still c
 
 If you've gotten this far, I'll assume you don't need any reminders on how to connect to the server via SSH ;) However, creating an SSH tunnel takes a bit more effort than simply creating an SSH Connection.
 
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Linux / OS X-->
+#### Linux/OSX
 :::panel 
 1. Open a command prompt or terminal
 2. Enter the command: `ssh <username>@<hostname.io> -L 8888:localhost:<plexport>`
 3. Open your browser window and navigate to `http://localhost:8888/web`
 4. The browser will connect to your Plex server and let you know that there is an unclaimed server on your network.
 :::
-<!--Windows-->
+#### Windows
 :::panel
 1. Open up your PuTTY client again.
 2. Under gateway, enter the hostname of your server, e.g.: `yourhostname.io`

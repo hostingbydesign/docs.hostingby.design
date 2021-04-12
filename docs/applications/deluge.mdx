@@ -26,46 +26,93 @@ The GTK thin client uses a secure connection to your slot to display the remote 
 
 In order to use the Thin client, you must have a recent version of Deluge installed locally on your computer. Below are instructions for popular operating systems:
 
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Windows-->
-:::panel
-Grab the most recent version from [here](https://ftp.osuosl.org/pub/deluge/windows/?C=M;O=D) and save it to a common location (i.e. Downloads). 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs
+  defaultValue="windows"
+  values={[
+    {label: 'Windows', value: 'windows'},
+    {label: 'macOS', value: 'macos'},
+    {label: 'Debian/Ubuntu', value: 'debuntu'},
+    {label: 'OpenSUSE', value: 'opensuse'},
+    {label: 'Fedora', value: 'fedora'},
+    {label: 'Arch Linux', value: 'arch'},
+  ]}>
+  <TabItem value="windows">
+ 
+ 
+
+  Grab the most recent version from [here](https://ftp.osuosl.org/pub/deluge/windows/?C=M;O=D) and save it to a common location (i.e. Downloads). 
 Run the installer and follow the prompts.
-:::
-<!--Debian / Ubuntu-->
-:::panel
+ 
+ 
+
+  </TabItem>
+  <TabItem value="macos">
+  
+
+  You can grab a pre-2.0 version of deluge [here](https://ftp.osuosl.org/pub/deluge/mac_osx/?C=M;O=D), or install it via `brew` like so
+
+  ```bash
+  # For version 1.x
+  brew install --cask deluge 
+  # For python-based deluge
+  brew install pygobject3 gtk+3 adwaita-icon-theme
+  brew install libtorrent-rasterbar
+  brew link gettext --force
+  pip3 install deluge
+  ```
+  
+  
+  </TabItem>
+  <TabItem value="debuntu">
+
+
 Deluge is available from the distribution repositories. Simply open a terminal and issue the command:
 
-```plaintext
+```bash
 sudo apt update
 sudo apt install deluge
 ```
-:::
-<!--OpenSUSE-->
-:::panel
+
+
+</TabItem>
+<TabItem value="opensuse">
+
+
 Deluge is available from the distribution repositories. Simply open a terminal and issue the command:
 
-```plaintext
+```bash
 sudo zypper install deluge
 ```
-:::
-<!--Fedora-->
-:::panel
+
+</TabItem>
+
+
+<TabItem value="fedora">
+
+
 Deluge is available from the distribution repositories. Simply open a terminal and issue the command:
 
-```plaintext
+```bash
 sudo dnf install deluge
 ```
-:::
-<!--Arch Linux-->
-:::panel
+
+</TabItem>
+<TabItem value="arch">
+
 Deluge is available from the distribution repositories. Simply open a terminal and issue the command:
 
-```plaintext
+```bash
 sudo pacman -S deluge
 ```
-:::
-<!--END_DOCUSAURUS_CODE_TABS-->
+
+</TabItem>
+
+</Tabs>
+
+---
 
 Now that Deluge is installed on your machine, you need to configure it to connect to your slot.
 
@@ -154,28 +201,9 @@ For help on a specific command, use "<command> --help"
 
 Like all box configured applications, you can manage Deluge via SSH with box with start, stop, restart, enable and disable commands. To restart the deluge daemon, use `deluged`. To restart the web interface use `deluge-web`
 
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Start-->
-```plaintext
-box start deluged
-```
-<!--Stop-->
-```plaintext
-box stop deluged
-```
-<!--Restart-->
-```plaintext
-box restart deluged
-```
-<!--Enable-->
-```plaintext
-box enable deluged
-```
-<!--Disable-->
-```plaintext
-box disable deluged
-```
-<!--END_DOCUSAURUS_CODE_TABS-->
+import SystemdTabs from '../snippets/systemdtabs.mdx';
+
+<SystemdTabs service="deluge"/>
 
 ## Configuration
 

@@ -27,28 +27,9 @@ Once setup, lidarr will be available at the link `https://<hostname.io>/lidarr`
 
 Like all box configured applications, you can manage Lidarr via SSH with box with start, stop, restart, enable and disable commands.
 
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Start-->
-```plaintext
-box start lidarr
-```
-<!--Stop-->
-```plaintext
-box stop lidarr
-```
-<!--Restart-->
-```plaintext
-box restart lidarr
-```
-<!--Enable-->
-```plaintext
-box enable lidarr
-```
-<!--Disable-->
-```plaintext
-box disable lidarr
-```
-<!--END_DOCUSAURUS_CODE_TABS-->
+import SystemdTabs from '../snippets/systemdtabs.mdx';
+
+<SystemdTabs service="lidarr"/>
 
 ## Configuration
 

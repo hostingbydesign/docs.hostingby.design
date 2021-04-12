@@ -27,28 +27,9 @@ Once setup, bazarr will be available at the link `https://<hostname.io>/bazarr`
 
 Like all box configured applications, you can manage Bazarr via SSH with box with start, stop, restart, enable and disable commands.
 
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Start-->
-```plaintext
-box start bazarr
-```
-<!--Stop-->
-```plaintext
-box stop bazarr
-```
-<!--Restart-->
-```plaintext
-box restart bazarr
-```
-<!--Enable-->
-```plaintext
-box enable bazarr
-```
-<!--Disable-->
-```plaintext
-box disable bazarr
-```
-<!--END_DOCUSAURUS_CODE_TABS-->
+import SystemdTabs from '../snippets/systemdtabs.mdx';
+
+<SystemdTabs service="bazarr"/>
 
 ## Configuration
 
@@ -68,23 +49,20 @@ On the `Subtitles` page, choose a provider and set at least one language. You wo
 ### Connect to *darr apps
 If Sonarr or Radarr weren't setup when you installed, you can still manually configure the connection to these apps. To add a media client, go to `Settings > Sonarr` or `Settings > Radarr`.
 
-<!--DOCUSAURUS_CODE_TABS-->
-<!--Sonarr-->
+#### Sonarr
 ```plaintext
 IP: <subnet IP>
 Port: <sonarr port>
 Base URL: /sonarr
 API Key: <sonarr API>
 ```
-
-<!--Radarr-->
+#### Radarr
 ```plaintext
 IP: <subnet IP>
 Port: <radarr port>
 Base URL: /radarr
 API Key: <radarr API>
 ```
-<!--END_DOCUSAURUS_CODE_TABS-->
 
 :::tip Tip
 Forgot your subnet, API key or port? No worries, here are oneliners you can submit from SSH:
