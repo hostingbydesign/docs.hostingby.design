@@ -39,7 +39,6 @@ module.exports = {
             "guides/d2r",
             "guides/flexget",
             "guides/jdownloader",
-            "guides/sonarrv3",
             "guides/systemd"
           ],
         },
