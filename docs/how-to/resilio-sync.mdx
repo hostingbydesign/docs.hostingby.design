@@ -1,0 +1,62 @@
+---
+id: resilio-sync
+title: How to configure Resilio Sync
+sidebar_label: Configure Resilio Sync
+---
+In this guide, we will outline the ways of getting Resilio Sync setup on your seedbox with us, it will however not cover setting it up locally on a NAS or similar.
+
+The first thing you have to do, is to login to your  service's webui for Resilio, this is done via the link as listed below;
+
+https://(username).seedbox.io/resilio - Once you have entered this path, you will be asked for your login credentials that have been provided in the welcome email (It is the same for FTP and WEB access), you will then be greeted with the first page;
+
+![](https://i.imgur.com/YRC4ck3.png)
+
+Here you simply tick the options, and click on "Get started"
+
+When logged in, you will often see this message at the start;
+
+![](https://i.imgur.com/gIiQKTQ.png)
+
+You will have to ignore this, we are behind updates on purpose to avoid adopting new software that might cause issues, if you are having a specific issue that are fixed in a newer version, then please reach to our support team.
+
+Next step is to add a folder, there's a little thing to take note of here, we will guide you through that below here.
+
+First, click on the plus sign and hit "Standard Folder"
+
+![](https://i.imgur.com/zxULu0e.png)
+
+Then the big issue comes here, as Resilio is not meant to sync the initial folder for downloads, you cannot simply add one 
+
+![](https://i.imgur.com/AErsijB.png)
+
+
+
+Doing so will result in an error, therefore the only way to do this is via the webui and the builtin file manager:
+
+You simply click file manager, right click and pick "New directory":
+
+![](https://i.imgur.com/uD9UHxC.png)
+
+Once that is done, you will have the option of adding that folder inside the Resilio Sync config:
+
+![](https://i.imgur.com/23dRBLV.png)
+
+From here you can then chose the permissions etc for this folder, and we strongly advice using the "Copy" option for the key as it is generally less prone to issues:
+
+![](https://i.imgur.com/KtH0GrH.png)
+
+![](https://i.imgur.com/ij6NgVk.png)
+
+This is then inserted into your local Resilio Sync installation and the sync folder will be created.
+
+Now this will not automatically download all data, as the data is being download to another folder, you can get around this by using the autotools plugin inside the rutorrent interface, so once again head over there:
+
+![](https://i.imgur.com/2XlESKF.png)
+
+![](https://i.imgur.com/FofhoiL.png)
+
+A few things to note on the screenshot above, first click autotools in the left panel, then click "Enable automove", make sure the filter is set as listed (It is the default setting), then where the button is now an X it will be a few dots, click that to get a full listing of your content, and then simply click on the "Testing" folder (Or what you called it yourself) and then click on the X to select it, OK to save it.
+
+Once all of this has been configured you are good to go!
+
+As always, if you have any questions, then do please hightlight our support team and we will do our best to help you out.

@@ -6,6 +6,18 @@ module.exports = {
 	      },
         {
           type: 'category',
+          label: 'Pre-Sales',
+          items: [
+            'pre-sales/payment-methods',
+            'pre-sales/notes-cc',
+            'pre-sales/refund',
+            'pre-sales/switching',
+            'pre-sales/premium-traffic',
+            'pre-sales/dedicated-ip'
+          ],
+        },
+        {
+          type: 'category',
           label: 'App Slots',
           items: [
             {
@@ -48,42 +60,50 @@ module.exports = {
         },
         {
           type: 'category',
-          label: 'FAQ',
+          label: 'Shared/Storage slots',
           items: [
-            'faq/disk-upgrade',
-            'faq/webinterface',
-            'faq/slow-ftp',
-            'faq/rutorrent-plugins',
-            'faq/renewal',
-            'faq/ratio',
-            'faq/public-trackers',
-            'faq/multiple-torrents',
-            'faq/location',
-            'faq/fxp',
-            'faq/backup'
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Pre-Sales',
-          items: [
-            'pre-sales/payment-methods',
-            'pre-sales/notes-cc',
-            'pre-sales/refund',
-            'pre-sales/switching',
-            'pre-sales/premium-traffic',
-            'pre-sales/dedicated-ip'
+            'shared-storage/connect-ftp',
+            'shared-storage/disk-upgrade',
+            'shared-storage/webinterface',
+            'shared-storage/slow-ftp',
+            'shared-storage/rutorrent-plugins',
+            'shared-storage/renewal',
+            'shared-storage/ratio',
+            'shared-storage/public-trackers',
+            'shared-storage/multiple-torrents',
+            'shared-storage/location',
+            'shared-storage/fxp',
+            'shared-storage/backup'
           ],
         },
         {
           type: 'category',
           label: 'Getting Started',
           items: [
-            'getting-started/connect-ftp',
             'getting-started/introduction-c',
             'getting-started/login-details',
             'getting-started/using-webinterface',
           ],
         },
+        {
+          type: 'category',
+          label: 'How to...',
+          items: [
+            'how-to/bouncer',
+            'how-to/available-space',
+            'how-to/change-password',
+            'how-to/connect-openvpn',
+            'how-to/connect-sonarr',
+            'how-to/kodi',
+            'how-to/lftp',
+            'how-to/mount-service',
+            'how-to/remoteadder',
+            'how-to/resilio-sync',
+            'how-to/restart-seedbox',
+            'how-to/torrentcontrol',
+            'how-to/transdroid',
+            'how-to/upgrade-seedbox'
+          ],
+        }
       ],
     };
