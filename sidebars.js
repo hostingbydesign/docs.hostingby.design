@@ -73,7 +73,27 @@ module.exports = {
             'shared-storage/multiple-torrents',
             'shared-storage/location',
             'shared-storage/fxp',
-            'shared-storage/backup'
+            'shared-storage/backup',
+            {
+              type: 'category',
+              label: 'How to...',
+              items: [
+                'shared-storage/how-to/bouncer',
+                'shared-storage/how-to/available-space',
+                'shared-storage/how-to/change-password',
+                'shared-storage/how-to/connect-openvpn',
+                'shared-storage/how-to/connect-sonarr',
+                'shared-storage/how-to/kodi',
+                'shared-storage/how-to/lftp',
+                'shared-storage/how-to/mount-service',
+                'shared-storage/how-to/remoteadder',
+                'shared-storage/how-to/resilio-sync',
+                'shared-storage/how-to/restart-seedbox',
+                'shared-storage/how-to/torrentcontrol',
+                'shared-storage/how-to/transdroid',
+                'shared-storage/how-to/upgrade-seedbox'
+              ],
+            }
           ],
         },
         {
@@ -85,25 +105,5 @@ module.exports = {
             'getting-started/using-webinterface',
           ],
         },
-        {
-          type: 'category',
-          label: 'How to...',
-          items: [
-            'how-to/bouncer',
-            'how-to/available-space',
-            'how-to/change-password',
-            'how-to/connect-openvpn',
-            'how-to/connect-sonarr',
-            'how-to/kodi',
-            'how-to/lftp',
-            'how-to/mount-service',
-            'how-to/remoteadder',
-            'how-to/resilio-sync',
-            'how-to/restart-seedbox',
-            'how-to/torrentcontrol',
-            'how-to/transdroid',
-            'how-to/upgrade-seedbox'
-          ],
-        }
       ],
     };
