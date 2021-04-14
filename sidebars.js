@@ -74,6 +74,7 @@ module.exports = {
             'shared-storage/location',
             'shared-storage/fxp',
             'shared-storage/backup',
+            'shared-storage/using-webinterface',
             {
               type: 'category',
               label: 'How to...',
@@ -102,7 +103,6 @@ module.exports = {
           items: [
             'getting-started/introduction-c',
             'getting-started/login-details',
-            'getting-started/using-webinterface',
           ],
         },
       ],
