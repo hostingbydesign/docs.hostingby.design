@@ -1,0 +1,39 @@
+---
+id: connect-ftp
+title: How to connect to seedbox with FTP
+sidebar_label: Connect using FTP
+---
+To download files from the seedbox we recommend that you use FileZilla FTP client, it is possible to download it on the following link: www.filezilla-project.org
+
+The client is available for Windows, MAC and Linux..
+
+Once installed and opened, you will be presented with a program which for some users might seem confusing, but you only need 3 items to connect to your FTP.
+
+* Hostname
+* Username
+* Password (Make sure you don't copy a space at the end of the password!)
+
+These are all included in the welcome email that you got from us during the signup.
+
+Once the program is opened you will be presented with the following options at the top of the client.
+
+
+
+The informations need to be inserted into the fields in the same order as they were listed above, once you have inserted them hit the quickconnect and it will load.
+
+When you connect the first time, you will be presented with the following message:
+
+![](https://seedbox.io/img/fz4.png)
+
+Make sure you tick the option: "Always trust certificate in future sessions."
+
+**A few things to be aware of when connecting:**
+
+* Make sure you have the right folder in the LEFT square, as that's the download location
+* To download a file from the seedbox, right click and hit download
+* If you are already actively downloading, right click and hit "Add to Queue"
+* We always use standard ports for our default services, if you wish to use FTP or FTPS, connect on port: 21 (or leave it blank), if you wish to use SFTP, connect on port: 22
+
+The bottom part of FileZilla will show you ongoing transfers, including the total queued size.
+
+If you are experiencing slow download speeds via FTP, please head over to this article: Slow FTP speeds

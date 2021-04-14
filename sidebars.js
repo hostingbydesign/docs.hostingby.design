@@ -3,46 +3,87 @@ module.exports = {
         {
           type: 'doc',
           id: 'home',
-	},
+	      },
         {
           type: 'category',
-          label: 'App Range',
+          label: 'App Slots',
           items: [
+            {
+              "Getting Started": [
+                'appslots/getting-started/how-do-i-connect',
+                'appslots/getting-started/dashboard',
+                'appslots/getting-started/box-basics',
+                'appslots/getting-started/abuse',
+                'appslots/getting-started/bandwith'
+              ],
+              Applications: [
+                "appslots/applications/application-basics",
+                "appslots/applications/rtorrent",
+                "appslots/applications/deluge",
+                "appslots/applications/autodl",
+                "appslots/applications/medusa",
+                "appslots/applications/sonarr",
+                "appslots/applications/radarr",
+                "appslots/applications/lidarr",
+                "appslots/applications/bazarr",
+                "appslots/applications/jackett",
+                "appslots/applications/ombi",
+                "appslots/applications/plex",
+                "appslots/applications/tautulli",
+                "appslots/applications/emby",
+                "appslots/applications/btsync",
+                "appslots/applications/nzbget",
+                "appslots/applications/sabnzbd",
+                "appslots/applications/wireguard",
+                "appslots/applications/plex-tunnel"
+              ],
+              Guides: [
+                "appslots/guides/d2r",
+                "appslots/guides/flexget",
+                "appslots/guides/jdownloader",
+                "appslots/guides/systemd"
+              ],
+            },
+          ],
+        },
         {
-          "Getting Started": [
-            'getting-started/how-do-i-connect',
-            'getting-started/dashboard',
-            'getting-started/box-basics',
+          type: 'category',
+          label: 'FAQ',
+          items: [
+            'faq/disk-upgrade',
+            'faq/webinterface',
+            'faq/slow-ftp',
+            'faq/rutorrent-plugins',
+            'faq/renewal',
+            'faq/ratio',
+            'faq/public-trackers',
+            'faq/multiple-torrents',
+            'faq/location',
+            'faq/fxp',
+            'faq/backup'
           ],
-          Applications: [
-            "applications/application-basics",
-            "applications/rtorrent",
-            "applications/deluge",
-            "applications/autodl",
-            "applications/medusa",
-            "applications/sonarr",
-            "applications/radarr",
-            "applications/lidarr",
-            "applications/bazarr",
-            "applications/jackett",
-            "applications/ombi",
-            "applications/plex",
-            "applications/tautulli",
-            "applications/emby",
-            "applications/btsync",
-            "applications/nzbget",
-            "applications/sabnzbd",
-            "applications/wireguard",
-            "applications/plex-tunnel"
+        },
+        {
+          type: 'category',
+          label: 'Pre-Sales',
+          items: [
+            'pre-sales/payment-methods',
+            'pre-sales/notes-cc',
+            'pre-sales/refund',
+            'pre-sales/switching',
+            'pre-sales/premium-traffic',
+            'pre-sales/dedicated-ip'
           ],
-          Guides: [
-            "guides/d2r",
-            "guides/flexget",
-            "guides/jdownloader",
-            "guides/systemd"
+        },
+        {
+          type: 'category',
+          label: 'Getting Started',
+          items: [
+            'getting-started/connect-ftp',
+            'getting-started/introduction-c',
+            'getting-started/login-details',
+            'getting-started/using-webinterface',
           ],
         },
       ],
-    },
-  ],
-};
+    };

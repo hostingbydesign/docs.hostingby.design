@@ -1,0 +1,44 @@
+---
+id: using-webinterface
+title: Using the webinterface
+sidebar_label: Using the webinterface
+---
+## ruTorrent
+
+The webinterface that are being used on our servers are ruTorrent, this is a graphic webinterface for the command line client rtorrent, for now it is only possible to use rtorrent with rutorrent webinterface on our servers.
+
+**DO NOTE**, while ruTorrent is a very stable interface, it does not behave nicely with situations where there's more than 1000-1500 torrents loaded in the client, this is due to limitations in the XMLRPC interface in rtorrent.
+
+
+To get started using the interface, just follow this mini guide.
+
+1. 
+When you signed up for a seedbox, you will also be send an email containing all of the login details for your seedbox, these are the items that you need to enter the webinterface: **Seedbox URL**, **USERNAME**, **PASSWORD**.
+
+When you connect to the seedbox for the first time, you will be welcomed by a login prompt, from here you must enter the **USERNAME** and **PASSWORD** that you have gotten via email.
+
+Once logged in, you will see the picture shown below.
+
+![](http://i.imgur.com/TWhJvwS.png)
+
+From here you have the total overview of the seedbox, to actually load something in to the client, you will have to look at the top left corner.
+
+From there you have the following buttons.
+
+![](http://i.imgur.com/VTFn8Tx.png)
+
+
+From left to right: Add torrents, Create torrent, Remove torrent, Start, Pause, Stop, RSS Downloader, Settings, Pause automatic webui updates, Force refresh webui, Plugins manager, and finally the about button.
+
+(We will go into more details with the RSS downloader in another tutorial.)
+
+The main button here is the GLOBUS, hitting this will provide you with a popup window that shows the following:
+
+![](http://i.imgur.com/GzKhQWm.png)
+
+The main option here is the "Browse" and "Add file", when you hit browse you will have to locate the torrent that you wish to upload (Recommended), you also have the option to add the file via URL,
+this is especially used if you use public trackers that are using MAGNET links.
+
+Once you have added the torrent via the add file option, the torrent will start downloading onto your seedbox.
+
+Remember, you are free to run as many torrents as you wish! (Do note that the webui starts having issues when there's more than 2500-3000 torrents loaded).
