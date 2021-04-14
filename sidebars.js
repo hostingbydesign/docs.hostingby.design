@@ -71,7 +71,6 @@ module.exports = {
           label: 'Shared/Storage slots',
           items: [
             'shared-storage/connect-ftp',
-            'shared-storage/disk-upgrade',
             'shared-storage/webinterface',
             'shared-storage/slow-ftp',
             'shared-storage/rutorrent-plugins',
