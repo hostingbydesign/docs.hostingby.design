@@ -18,6 +18,14 @@ module.exports = {
         },
         {
           type: 'category',
+          label: 'Getting Started',
+          items: [
+            'getting-started/introduction-c',
+            'getting-started/login-details',
+          ],
+        },
+        {
+          type: 'category',
           label: 'App Slots',
           items: [
             {
@@ -95,14 +103,6 @@ module.exports = {
                 'shared-storage/how-to/upgrade-seedbox'
               ],
             }
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Getting Started',
-          items: [
-            'getting-started/introduction-c',
-            'getting-started/login-details',
           ],
         },
       ],
