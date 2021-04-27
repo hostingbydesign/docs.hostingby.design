@@ -51,6 +51,7 @@ module.exports = {
                 "appslots/applications/plex",
                 "appslots/applications/tautulli",
                 "appslots/applications/emby",
+                "appslots/applications/jellyfin",
                 "appslots/applications/btsync",
                 "appslots/applications/nzbget",
                 "appslots/applications/sabnzbd",
