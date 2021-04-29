@@ -1,0 +1,41 @@
+---
+id: jellyfin
+title: Jellyfin
+sidebar_label: Jellyfin
+---
+
+Jellyfin is a self-hosted AV streaming platform. It is a FOSS fork of the Emby project.
+
+## Installation
+
+You can install Jellyfin using the following command.
+
+```bash
+sudo box install jellyfin
+```
+
+:::caution Finish install in browser
+Please make sure to finish the setup of the application through the web browser, and create your admin user.
+:::
+
+## Access
+
+You can access jellyfin through `https://appxx.lw.seedbox.io/<yourusername>/jellyfin`.
+
+## User management
+
+Jellyfin manages its users in a separate database. Please use the Web-UI to manage users and media.
+
+## Service management
+
+import SystemdTabs from "../snippets/systemdtabs.mdx";
+
+<SystemdTabs service="jellyfin" />
+
+## Troubleshooting
+
+If you were early-access to the apprange and have been experiencing issues with Jellyfin, please change your transcode hardware acceleration to "none".
+
+Jellyfin has a general [Troubleshooting guide](https://jellyfin.org/docs/general/administration/troubleshooting.html) which we highly suggest you follow first in case you have any issues.
+
+If all else fails, consider putting in a [ticket](https://panel.seedbox.io/clientarea.php).
