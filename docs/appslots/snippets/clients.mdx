@@ -1,0 +1,83 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import CodeBlock from "@theme/CodeBlock";
+
+To add a download client, go to `Settings > Download Client`. Make sure `Advanced Settings` are shown and click `Add Client`.
+
+<Tabs
+  defaultValue="rutorrent"
+  values={[
+    { label: "ruTorrent", value: "rutorrent" },
+    { label: "Deluge", value: "deluge" },
+    { label: "qBittorrent", value: "qbittorrent" },
+    { label: "NZBGet", value: "nzbget" },
+    { label: "SABnzbd", value: "sabnzbd" },
+  ]}
+>
+  <TabItem value="rutorrent">
+    <CodeBlock
+      children="Name: rTorrent
+rTorrent host: 127.0.0.1
+Port: 443
+URL Path: /rutorrent/plugins/httprpc/action.php
+Use SSL: ON
+Username: <your username>
+Password: <your password>
+Add label to torrent: TV (or anything else you desire)
+Optional - Downloaded files location: <custom directory>
+NOTE: If you have errors adding rTorrent to Sonarr, please try going to Settings > General and disable certificate validation for localhost addresses"
+      className="plaintext"
+    ></CodeBlock>
+  </TabItem>
+  <TabItem value="deluge">
+    <CodeBlock
+      children="Name: Deluge
+Host: 127.0.0.1
+Post: <deluge web port>
+Deluge Password: <your password>
+Add label to torrent: TV (or anything else you desire)
+* label plugin must be enabled in Deluge if you add a label
+SSL: OFF"
+      className="plaintext"
+    ></CodeBlock>
+  </TabItem>
+  <TabItem value="qbittorrent">
+    <CodeBlock
+      children="Name: qBittorrent
+Host: 127.0.0.1
+Post: <qbittorrent web port>
+Username: <your username>
+Password: <your password>
+Category: TV (or anything else you desire)
+SSL: OFF"
+      className="plaintext"
+    ></CodeBlock>
+  </TabItem>
+  <TabItem value="nzbget">
+    <CodeBlock
+      children="Name: NZBget
+NZBget host: 127.0.0.1
+port: 443
+URL Base: nzbget
+Connect using HTTPS: ON
+nzbget username: <your username>
+nzbget Password: <your password>
+Add label to torrent: Series (or anything else you desire)
+* label must exist under Categories in nzbGet"
+      className="plaintext"
+    ></CodeBlock>
+  </TabItem>
+  <TabItem value="sabnzbd">
+    <CodeBlock
+      children="Name: SABnzbd
+SABnzbd host: 127.0.0.1
+port: 443
+Use SSL: ON
+URL Base: /<yourusername>/sabnzbd
+API Key: <yourapikey>
+Add label to torrent: Series (or anything else you desire)
+* label must exist under Categories in SABnzbd"
+      className="plaintext"
+    ></CodeBlock>
+  </TabItem>
+</Tabs>

@@ -1,0 +1,87 @@
+---
+id: qbittorrent
+title: qBittorrent
+sidebar_label: qBittorrent
+---
+
+qBittorrent is an open-source alternative utorrent. It's written in C++ and uses Boost, Qt toolkit, and the libtorrent library to deliver a fast torrent client.
+
+## Intital Setup
+
+```bash
+box install qbittorrent
+```
+
+This will install a tuned qBittorrent client from Seedbox.io.
+
+## How to Access
+
+Accessing the web-gui is simple, just append /qbittorrent to the hostname you've been provisioned on. For instance, `https://<hostname.io>/qbittorrent/`.
+
+## Service Management
+
+Like all box configured applications, you can manage qBittorrent via SSH with box with start, stop, restart, enable and disable commands.
+
+import SystemdTabs from "../snippets/systemdtabs.mdx";
+
+<SystemdTabs service="qbittorrent" />
+
+## Connecting to other Software:
+
+### Connecting to a remote client (i.e. Sonarr)
+
+Open up the web-gui, as listed above. Click the settings gear icon located in the top left menu. Click Web UI, then copy the port number listed.
+
+You can now connect to your qBittorrent instance through `http://<hostname.io>:<qbittorrent-port>` with normal qbittorrent authenication measures rather than nginx-forwarded plain http authenticaiton.
+
+### Command Line
+
+:::caution
+These tools are not officially supported. Please consider reaching out to [our Discord](https://discord.gg/wv67teS) for unofficial community-driven support on tools listed below.
+:::
+Some of our community members have written CLI interfaces for qBittorrent. We've included them below, along with install methods for each.
+
+#### qBittorrent CLI
+
+[qBittorrent CLI](https://github.com/ludviglundgren/qbittorrent-cli) is a very powerful CLI written in go. You can read about it's features in the [command reference](https://github.com/fedarovich/qbittorrent-cli/wiki/command-reference). Essentially, it can
+
+- Add torrents to qBittorrent from file or magnet link. Useful in combination with autodl-irssi
+- Reannounce torrents for troublesome trackers
+- Set limits on how many simultaneously active downloads are allowed
+- Import torrents with state from Deluge and rTorrent
+
+##### Installation
+
+```bash
+curl $(curl -sNL https://api.github.com/repos/ludviglundgren/qbittorrent-cli/releases/latest | grep -Po 'ht(.*)linux_amd64(.*)tar.gz') -L -o /tmp/qbittorrent-cli.tar.gz
+tar -xvf /tmp/qbittorrent-cli.tar.gz --exclude={CHANGELOG.md,README.md} -C ~/bin/
+```
+
+#### qbittools
+
+[qbittools](https://gitlab.com/AlexKM/qbittools) is a feature rich CLI for the management of torrents. Detailed examples of how to use the tools are in the [Readme](https://gitlab.com/AlexKM/qbittools/-/blob/master/README.md#usage). Some features are:
+
+- Adding
+- Unpausing torrents
+- Automatic Tagging of all torrents
+- Exporting torrents.
+
+##### Installation
+
+```bash
+curl -Ls https://gitlab.com/AlexKM/qbittools/-/raw/master/install.sh | bash -s -- -o ~/bin/qbittools
+```
+
+## Troubleshooting
+
+:::tip
+
+qBittorrent can be troubleshooted by checking the logs. If you need help connecting to the server, please read the help article [here](../getting-started/how-do-i-connect.md). You can view the log by SSHing into your server and running the following:
+
+```bash
+less -r +G ~/.local/share/qBittorrent/logs/qbittorrent.log
+```
+
+To exit `less`, press `q`.
+
+:::

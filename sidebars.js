@@ -40,6 +40,7 @@ module.exports = {
                 "appslots/applications/application-basics",
                 "appslots/applications/rtorrent",
                 "appslots/applications/deluge",
+                "appslots/applications/qbittorrent",
                 "appslots/applications/autodl",
                 "appslots/applications/medusa",
                 "appslots/applications/sonarr",
