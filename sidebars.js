@@ -63,6 +63,7 @@ module.exports = {
                 "appslots/guides/d2r",
                 "appslots/guides/flexget",
                 "appslots/guides/jdownloader",
+                "appslots/guides/mktorrent",
                 "appslots/guides/systemd"
               ],
             },
