@@ -58,7 +58,11 @@ module.exports = {
                 "appslots/applications/sabnzbd",
                 "appslots/applications/wireguard",
                 "appslots/applications/plex-tunnel"
+                ],
+              "Community Applications": [
+                "appslots/community-applications/filebrowser"
               ],
+
               Guides: [
                 "appslots/guides/d2r",
                 "appslots/guides/flexget",

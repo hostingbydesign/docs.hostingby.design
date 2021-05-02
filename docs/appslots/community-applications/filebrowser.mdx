@@ -1,0 +1,61 @@
+---
+id: filebrowser
+title: Filebrowser
+sidebar_label: Filebrowser
+---
+
+A frequently asked question we get from customers is if we have support for filebrowser. At the time of writing, we don't officially support it, but it can be installed using a script a community member has written.
+
+To follow this guide, you will need to SSH into your server. If you need help with this, please refer to the [how do I connect](../getting-started/how-do-i-connect.md) article.
+
+import Community from "../snippets/community.mdx";
+
+<Community />
+
+## Installation
+
+This installer will use your existing username and a randomly generated password (or one of your choice) to secure filebrowser. Please consider [reading the script](https://gist.github.com/brettpetch/b7aeea697e47eca81bf4761be14651d9) before running it. The installer will output a port number with how to access the filebrowser install on completion. Please remember this number.
+
+```bash
+bash <(curl -sL https://gist.github.com/brettpetch/b7aeea697e47eca81bf4761be14651d9/raw/2eb9e9ae792d6a56e8feb58021b5f35510438771/filebrowser.sh)
+```
+
+:::tip
+If something goes wrong during your install, please consider checking the logs. You may find them by running the following:
+
+```bash
+less -r +G ~/.logs/filebrowser.log
+```
+
+These can be helpful in cases where you need to see the output from installation.
+:::
+On first run, go to `https://<hostname.io>:<yourportnumber>` to access Filebrowser. This should ask you for a login. You will also receive a warning about SSL, which can be ignored safely.
+
+## Controlling the Systemd Service
+
+import UserSystemd from "../snippets/usersystemd.mdx";
+
+<UserSystemd service="filebrowser" />
+
+## Troubleshooting
+
+#### I Can't Remember my Port Number
+
+Run `grep "[::]:" ~/.config/Filebrowser/filebrowser.log` via ssh. This should respond with a line that looks like the following:
+
+```plaintext
+<date and time> Listening on [::]:16781
+        this is your port number    ^
+```
+
+#### Viewing logs
+
+:::tip  
+For application specific logs, consider running the following:
+
+```bash
+less -r +G ~/.config/Filebrowser/filebrowser.log
+```
+
+You can exit `less` by pressing `q` at any point.
+:::

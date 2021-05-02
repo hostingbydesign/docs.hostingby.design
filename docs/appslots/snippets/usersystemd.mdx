@@ -16,37 +16,37 @@ import CodeBlock from "@theme/CodeBlock";
   >
     <TabItem value="status">
       <CodeBlock
-        children={"box status " + props.service}
+        children={"systemctl --user status " + props.service}
         className="bash"
       ></CodeBlock>
     </TabItem>
     <TabItem value="start">
       <CodeBlock
-        children={"box start " + props.service}
+        children={"systemctl --user start " + props.service}
         className="bash"
       ></CodeBlock>
     </TabItem>
     <TabItem value="stop">
       <CodeBlock
-        children={"box stop " + props.service}
+        children={"systemctl --user stop " + props.service}
         className="bash"
       ></CodeBlock>
     </TabItem>
     <TabItem value="restart">
       <CodeBlock
-        children={"box restart " + props.service}
+        children={"systemctl --user restart " + props.service}
         className="bash"
       ></CodeBlock>
     </TabItem>
     <TabItem value="enable">
       <CodeBlock
-        children={"box enable " + props.service}
+        children={"systemctl --user enable " + props.service}
         className="bash"
       ></CodeBlock>
     </TabItem>
     <TabItem value="disable">
       <CodeBlock
-        children={"box disable " + props.service}
+        children={"systemctl --user disable " + props.service}
         className="bash"
       ></CodeBlock>
     </TabItem>
