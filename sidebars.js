@@ -60,9 +60,9 @@ module.exports = {
                 "appslots/applications/plex-tunnel"
                 ],
               "Community Applications": [
-                "appslots/community-applications/filebrowser"
+                "appslots/community-applications/filebrowser",
+                "appslots/community-applications/requestrr"
               ],
-
               Guides: [
                 "appslots/guides/d2r",
                 "appslots/guides/flexget",
