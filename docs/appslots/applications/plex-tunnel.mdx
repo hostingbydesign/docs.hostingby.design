@@ -7,6 +7,7 @@ sidebar_label: plex-tunnel
 plex-tunnel is a simple configuration to help reroute your plex traffic through a VPS of your choosing, to help improve routing on your Plex streams.
 
 ## Initial Setup
+
 :::caution
 In order to setup the Plex tunnel, you need to setup your own external VPS. **This is not provided by us. It must be provided by you.** This tunnel is just an option to allow you to setup **your own** route to the server, rather than relying on the peering of the server to your ISP.
 :::
@@ -18,6 +19,7 @@ Installing the plex tunnel is easy. Simply issue the following command:
 ```plaintext main
 box install plex-tunnel
 ```
+
 You will need to following information:
 
 - The IP of your VPS
@@ -30,8 +32,7 @@ If you don't supply a root or sudo user, you'll have to change the configuration
 
 1. Add the line: `GatewayPorts yes` to `/etc/ssh/sshd_config`
 2. Restart your ssh daemon: `sudo systemctl restart sshd`
-:::
-
+   :::
 
 ## How to Access
 
@@ -41,6 +42,6 @@ Once the tunnel has been created, you'll no longer be able to access Plex from t
 
 Like all box configured applications, you can the tunnel via SSH with box with start, stop, restart, enable and disable commands.
 
-import SystemdTabs from '../snippets/systemdtabs.mdx';
+import SystemdTabs from "../snippets/systemdtabs.mdx";
 
-<SystemdTabs service="plex-tunnel"/>
+<SystemdTabs service="plex-tunnel" />

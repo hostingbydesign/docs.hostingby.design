@@ -1,15 +1,18 @@
 ---
 id: lftp
 title: How to use LFTP
-sidebar_label: Use LFTP
+sidebar_label: Using LFTP
 ---
+
 LFTP is a great tool for those that are on Linux as it will be one of the very fastest options for getting data back to your home as it supports not only segments but also multi-file downloads out of the box.
 
 A small writeup can be found below:
-```
+
+```bash
 lftp -u username,password -e 'mirror -v -c -P 6 --Remove-source-files /source/folder/ /destination/folder/' sftp://URL
 ```
 
+```plaintext
 -u = username[,password]
 
 -e = initiates a command (must be followed by one)
@@ -27,8 +30,10 @@ mirror  can download or update a whole directory tree
 /source/folder/ = folder on your seedbox you want to download
 
 /destination/folder/ = where to put it on your home/destination machine
-
+```
 
 Please note that in the above, remove-source-files will delete data on our server once the file has been downloaded, if you wish to keep the files there, then remove that option.
 
-As always, let us know via ticket if you have any questions/issues.
+import Ticket from "../snippets/ticket.mdx";
+
+<Ticket />

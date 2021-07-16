@@ -28,7 +28,6 @@ foo.service would now attempt to be running in your user's context. You can chec
 systemctl status --user foo.service
 ```
 
-
 Some notes about service files:
 
 - Do not include the user or group variables. The systemd service will fail if you specify anything because the service implicitly runs as your user.

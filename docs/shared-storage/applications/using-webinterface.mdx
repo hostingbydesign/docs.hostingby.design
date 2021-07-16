@@ -3,12 +3,12 @@ id: using-webinterface
 title: Using the webinterface
 sidebar_label: Using the webinterface
 ---
+
 ## ruTorrent
 
 The webinterface that are being used on our servers are ruTorrent, this is a graphic webinterface for the command line client rtorrent, for now it is only possible to use rtorrent with rutorrent webinterface on our servers.
 
 **DO NOTE**, while ruTorrent is a very stable interface, it does not behave nicely with situations where there's more than 1000-1500 torrents loaded in the client, this is due to limitations in the XMLRPC interface in rtorrent.
-
 
 To get started using the interface, just follow this mini guide.
 
@@ -27,7 +27,6 @@ From there you have the following buttons.
 
 ![](http://i.imgur.com/VTFn8Tx.png)
 
-
 From left to right: Add torrents, Create torrent, Remove torrent, Start, Pause, Stop, RSS Downloader, Settings, Pause automatic webui updates, Force refresh webui, Plugins manager, and finally the about button.
 
 (We will go into more details with the RSS downloader in another tutorial.)
@@ -42,3 +41,7 @@ this is especially used if you use public trackers that are using MAGNET links.
 Once you have added the torrent via the add file option, the torrent will start downloading onto your seedbox.
 
 Remember, you are free to run as many torrents as you wish! (Do note that the webui starts having issues when there's more than 2500-3000 torrents loaded).
+
+import Ticket from "../snippets/ticket.mdx";
+
+<Ticket />

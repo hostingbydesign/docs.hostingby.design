@@ -26,9 +26,9 @@ After installation, you can access Medusa at the url: `https://<yourhostname.io>
 
 Like all box configured applications, you can manage Medusa via SSH with box with start, stop, restart, enable and disable commands.
 
-import SystemdTabs from '../snippets/systemdtabs.mdx';
+import SystemdTabs from "../snippets/systemdtabs.mdx";
 
-<SystemdTabs service="medusa"/>
+<SystemdTabs service="medusa" />
 
 ## Configuration
 
@@ -37,6 +37,7 @@ If you are unfamiliar with Medusa, please check out their [wiki](https://github.
 ## Connect to other clients
 
 ### rTorrent
+
 ```plaintext
 Send torrent files to: rTorrent
 rTorrent host/port: https://127.0.0.1/rutorrent/plugins/httprpc/action.php
@@ -49,6 +50,7 @@ Downloaded files location: ~/torrents/rtorrent (or a custom directory)
 ```
 
 ### Deluge (via Daemon)
+
 ```plaintext
 Send torrent files to: Deluge (via Daemon)
 Deluge: 127.0.0.1:<your daemon port>
@@ -60,6 +62,7 @@ Add label to torrent: TV (or anything else you desire)
 ```
 
 ### Deluge (via Web)
+
 ```plaintext
 Send torrent files to: Deluge (via Web)
 Deluge: 127.0.0.1:<your web port>
@@ -70,6 +73,7 @@ Add label to torrent: TV (or anything else you desire)
 ```
 
 ### NZBget
+
 ```plaintext
 Send nzb files to: nzbget
 NZBget host:port: 127.0.0.1/nzbget

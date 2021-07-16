@@ -15,6 +15,7 @@ Installing rTorrent is easy. Simply issue the following command:
 ```plaintext main
 box install rtorrent
 ```
+
 This command will configure rTorrent and ruTorrent for use on your slot.
 
 ## How to Access
@@ -22,14 +23,17 @@ This command will configure rTorrent and ruTorrent for use on your slot.
 Once rTorrent has been installed, you can either choose to access and command rTorrent from either the web-gui (ruTorrent) or the curses gui. The curses gui is considered "advanced" and not many users will opt for this option.
 
 ### ruTorrent
+
 To access the web-gui of rTorrent, simply append /rutorrent to the hostname of the machine you've been provisioned on, for example: `https://<hostname.io>/rutorrent`.
 
 ### Command Line
 
 rTorrent runs as a daemon thanks to the screen application. Thus, in order to connect to the curses UI, you simply need to attach to the running screen. For all users, the rtorrent screen is simply named rtorrent. In order to connect to the rtorrent screen session, simply issue the command:
+
 ```bash main
 screen -r rtorrent
 ```
+
 When done with the session, do not quit rTorrent. Rather, you should detach from the screen, so that rTorrent remains running in the background.
 
 To do this, press the keys: `ctrl-a, ctrl-d`
@@ -42,9 +46,9 @@ For help on using the curses UI, check the rTorrent user guide: [here](https://g
 
 Like all box configured applications, you can manage rTorrent via SSH with box with start, stop, restart, enable and disable commands
 
-import SystemdTabs from '../snippets/systemdtabs.mdx';
+import SystemdTabs from "../snippets/systemdtabs.mdx";
 
-<SystemdTabs service="rtorrent"/>
+<SystemdTabs service="rtorrent" />
 
 ## Configuration
 
@@ -55,6 +59,7 @@ The configuration of rTorrent is a file that lives in your home folder called .r
 Generally speaking, most of the other clients connect to rTorrent, not the other way around. There are typically two ways to connect a client to rTorrent: RPC mounts and Unix Sockets.
 
 ### Unix Sockets
+
 Rather than exposing a local, insecure TCP port the rTorrent client creates a socket that can only be listened to by your own user.
 
 This socket lives at:

@@ -3,6 +3,7 @@ id: slow-ftp
 title: Slow FTP Transfers
 sidebar_label: Slow FTP Transfers
 ---
+
 It is very common that transfers via FTP, can't utilize your full bandwidth, even though we have QoS systems to make sure that the FTP Transfers are always prioritized.
 You can solve it in a number of ways, the easiest and fastest way is to use FileZilla to transfer files from your seedbox, in the FileZilla settings, you can define how many simultaneous transfers it is allowed to use, set this to a higher number (we recommend 5), in case you are downloading a single file, this will not help, in that case we recommend using BitKinex FTP client instead..
 
@@ -11,14 +12,15 @@ If you use FileZilla, make sure you are using as many connections as possible, b
 
 If this does not work, we offer a FTP Bouncer service, which will send the data from our servers over high capacity links to a server which is located closer to you. You can find the description on how to use our bouncer servers here: https://panel.seedbox.io/index.php?rp=/knowledgebase/33/How-to-use-our-bouncer-servers.html
 
-We currently have bouncer services in: 
-* Amsterdam, Netherlands
-* Paris, France
-* Frankfurt, Germany
-* Sydney, Australia
-* New York, USA
-* California, USA
-* Toronto, Canada
-* Singapore
+We currently have bouncer services in:
 
-Follow this link on how to get started using the bouncer servers: https://panel.seedbox.io/knowledgebase.php?action=displayarticle&id=33
+- Amsterdam, Netherlands
+- Paris, France
+- Frankfurt, Germany
+- Sydney, Australia
+- New York, USA
+- California, USA
+- Toronto, Canada
+- Singapore
+
+Follow this link on [how to get started using the bouncer servers](/shared-storage/file-access/bouncer).
