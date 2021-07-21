@@ -1,0 +1,65 @@
+---
+id: overseerr
+title: Overseerr
+sidebar_label: Overseerr
+---
+
+Overseerr is a free and open source software application for managing requests for your media library. It integrates with your existing services, such as Sonarr, Radarr, and Plex!
+
+At the time of writing, we don't officially support Overseerr, but it can be installed using a script a community member has written.
+
+To follow this guide, you will need to SSH into your server. If you need help with this, please refer to the [how do I connect](../getting-started/how-do-i-connect.md) article.
+
+import Community from "../snippets/community.mdx";
+
+<Community />
+
+## Installation
+
+Before installation, please consider reading the installer script. You can read it on it's [github gist page](https://gist.github.com/brettpetch/542d375087820db3d04d54e006be260a). You can run the script by using the following command:
+
+```bash
+bash <(curl -sL https://gist.github.com/brettpetch/542d375087820db3d04d54e006be260a/raw/7dcc2c12032637f3b527f7317c89245b8ec85059/overseerr.sh)
+```
+
+:::tip
+If something goes wrong during your install, please consider checking the logs and the output in your console. You may find them by running the following:
+
+```bash
+less -r +G ~/.logs/overseerr.log
+```
+
+These can be helpful in cases where you need to see the output from installation.
+:::
+
+On first run, go to `http://<hostname.io>:<yourportnumber>` to access Overseerr. This should ask you to setup some credentials. Keep in mind that this application is exposed on the public internet.
+
+## Controlling the Systemd Service
+
+import UserSystemd from "../snippets/usersystemd.mdx";
+
+<UserSystemd service="overseerr" />
+
+## Troubleshooting
+
+For most troubleshooting, please consider consulting the [Overseerr Docs](https://docs.overseerr.dev/).
+
+#### I Can't Remember my Port Number
+
+Run the following via SSH.
+
+```bash
+cat ~/overseerr/env.conf
+```
+
+#### Viewing logs
+
+:::tip  
+For application specific logs, consider running the following:
+
+```bash
+systemctl --user status overseerr
+```
+
+You can exit `less` by pressing `q` at any point.
+:::
