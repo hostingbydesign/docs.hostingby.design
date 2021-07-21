@@ -78,36 +78,57 @@ module.exports = {
           type: 'category',
           label: 'Shared/Storage slots',
           items: [
-            'shared-storage/connect-ftp',
-            'shared-storage/webinterface',
-            'shared-storage/slow-ftp',
-            'shared-storage/rutorrent-plugins',
-            'shared-storage/renewal',
-            'shared-storage/ratio',
-            'shared-storage/public-trackers',
-            'shared-storage/multiple-torrents',
-            'shared-storage/location',
-            'shared-storage/fxp',
-            'shared-storage/backup',
-            'shared-storage/using-webinterface',
             {
               type: 'category',
-              label: 'How to...',
-              items: [
-                'shared-storage/how-to/bouncer',
-                'shared-storage/how-to/available-space',
-                'shared-storage/how-to/change-password',
-                'shared-storage/how-to/connect-openvpn',
-                'shared-storage/how-to/connect-sonarr',
-                'shared-storage/how-to/kodi',
-                'shared-storage/how-to/lftp',
-                'shared-storage/how-to/mount-service',
-                'shared-storage/how-to/remoteadder',
-                'shared-storage/how-to/resilio-sync',
-                'shared-storage/how-to/restart-seedbox',
-                'shared-storage/how-to/torrentcontrol',
-                'shared-storage/how-to/transdroid',
-                'shared-storage/how-to/upgrade-seedbox'
+              label: 'Administration',
+                items: [
+                'shared-storage/administration/backup',
+                'shared-storage/administration/change-password',
+                'shared-storage/administration/available-space',
+                'shared-storage/administration/location',
+                'shared-storage/administration/public-trackers',
+                'shared-storage/administration/renewal',
+                'shared-storage/administration/restart-seedbox',
+                'shared-storage/administration/unmetered-bw',
+                'shared-storage/administration/upgrade-seedbox'
+              ],
+            },
+              {
+              type: 'category',
+              label: 'Applications',
+                items: [
+                'shared-storage/applications/using-webinterface',
+                'shared-storage/applications/connect-openvpn',
+                'shared-storage/applications/connect-sonarr',
+                'shared-storage/applications/rutorrent-plugins',
+                'shared-storage/applications/kodi',
+                'shared-storage/applications/transdroid',
+                'shared-storage/applications/remoteadder',
+                'shared-storage/applications/torrentcontrol',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'File Access',
+                items: [
+                'shared-storage/file-access/connect-ftp',
+                'shared-storage/file-access/mount-service',
+                'shared-storage/file-access/bouncer',
+                'shared-storage/file-access/fxp',
+                'shared-storage/file-access/lftp',
+                'shared-storage/file-access/resilio-sync'
+
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Troubleshooting',
+                items: [
+                'shared-storage/troubleshooting/multiple-torrents',
+                'shared-storage/troubleshooting/ratio',
+                'shared-storage/troubleshooting/reroute',
+                'shared-storage/troubleshooting/slow-ftp',
+                'shared-storage/troubleshooting/webinterface'
               ],
             }
           ],

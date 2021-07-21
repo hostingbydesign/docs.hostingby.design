@@ -32,7 +32,6 @@ Now, enter your credentials in the waiting prompt in your SSH terminal.
 
 When done, you should now see your slot online in my.jdownloader. Kill this running process with `control-c`.
 
-
 ## Setting up the background service
 
 All that's left is to make a systemd-user service and enable it so that it runs in the background without any babysitting:
@@ -58,16 +57,19 @@ WantedBy=multi-user.target
 ```
 
 Reload your systemd user daemon:
+
 ```
 systemctl --user daemon-reload
 ```
 
 Enable and start the service now:
+
 ```
 systemctl enable --now --user jdownloader
 ```
 
 You can now check the status of jdownloader with
+
 ```
 systemctl status --user jdownloader
 ```

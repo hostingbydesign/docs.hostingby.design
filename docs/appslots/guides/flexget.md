@@ -50,12 +50,12 @@ tasks:
       port: 11111 (deluge daemon port)
       host: 127.0.0.1
 ```
+
 :::note
 There are also plugins for rTorrent, sabnzbd, nzbget, Sonarr, Radarr, etc -- I would highly recommend checking out the plugin guide for more info! The above is just the very basics of what can be accomplished via Flexget.
 :::
 
-
-The above task will scrape the `feed.xml` at myrssfeed.com and send *every new match* it finds to Deluge. Filtering can be more complex than simply `accept_all`; however, for any complex tasks you should consult the documentation for specifics on how best to do them. `accept_all` works best in the case of pre-filtered feeds, i.e. those that you have setup with custom rules on your tracker in question.
+The above task will scrape the `feed.xml` at myrssfeed.com and send _every new match_ it finds to Deluge. Filtering can be more complex than simply `accept_all`; however, for any complex tasks you should consult the documentation for specifics on how best to do them. `accept_all` works best in the case of pre-filtered feeds, i.e. those that you have setup with custom rules on your tracker in question.
 
 ## Setting up systemd services
 
@@ -68,11 +68,13 @@ mkdir -p ~/.config/systemd/user
 ```
 
 Now we must create our timer file:
+
 ```
 nano ~/.config/systemd/user/flexget.timer
 ```
 
 Inside that file, paste the following:
+
 ```
 [Unit]
 Description=Run flexget every 5 minutes
@@ -83,6 +85,7 @@ OnCalendar=*:0/5
 [Install]
 WantedBy=timers.target
 ```
+
 You are welcome to change `OnCalendar` to something sorter (e.g. `OnCalendar=minutely` for once a minute); however be aware that not all trackers like being hammered for RSS feeds every minute and may result in an IP ban. Please consult your tracker documentation before setting the limit this low. More advanced `OnCalendar` notation can be found [here](https://www.freedesktop.org/software/systemd/man/systemd.time.html#) in the systemd documentation.
 
 Save and exit this file. Now we must write the associated service file:
@@ -90,6 +93,7 @@ Save and exit this file. Now we must write the associated service file:
 ```
 nano ~/.config/systemd/user/flexget.service
 ```
+
 Inside this file, place the following
 
 ```
@@ -101,6 +105,7 @@ ExecStart=%h/flexget/bin/flexget execute --no-cache
 ```
 
 Make sure the user daemon has been reloaded:
+
 ```
 systemctl --user daemon-reload
 ```
@@ -117,4 +122,4 @@ If you run `systemctl --user status flexget.service` you should see any potentia
 
 You can also run `~/flexget/bin/flexget execute` directly from the command line to trigger the same command have its outputs dumped to your current terminal session for debugging.
 
-Finally, don't forget to checkout the [Flexget Plugins](https://flexget.com/Plugins) for an indepth overview on how to configure *all* the various options available to you.
+Finally, don't forget to checkout the [Flexget Plugins](https://flexget.com/Plugins) for an indepth overview on how to configure _all_ the various options available to you.

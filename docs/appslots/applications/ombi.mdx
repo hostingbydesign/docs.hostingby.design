@@ -4,7 +4,7 @@ title: Ombi
 sidebar_label: Ombi
 ---
 
- Ombi is a self-hosted web application that automatically gives your shared Plex or Emby users the ability to request content by themselves! Ombi can be linked to multiple TV Show and Movie DVR tools to create a seamless end-to-end experience for your users. 
+Ombi is a self-hosted web application that automatically gives your shared Plex or Emby users the ability to request content by themselves! Ombi can be linked to multiple TV Show and Movie DVR tools to create a seamless end-to-end experience for your users.
 
 ## Initial Setup
 
@@ -26,9 +26,9 @@ After installation, Ombi will be availabe at the following web address: `https:/
 
 Like all box configured applications, you can manage Ombi via SSH with box with start, stop, restart, enable and disable commands.
 
-import SystemdTabs from '../snippets/systemdtabs.mdx';
+import SystemdTabs from "../snippets/systemdtabs.mdx";
 
-<SystemdTabs service="ombi"/>
+<SystemdTabs service="ombi" />
 
 ## Configuration
 
@@ -39,10 +39,13 @@ If you have further questions about settings and configurations of Ombi, please 
 ## Connect to other clients
 
 ### Sonarr
+
 :::panel
+
 1. Select Sonarr from the TV Dropdown under settings.
 2. In order to configure Sonarr, you must first have a root folder setup. If you haven't set up any root folders in Sonarr, please add a show and setup your Sonarr root show directory first.
 3. Use the following configuration:
+
 ```plaintext
 Enable: checked
 Hostname or IP: <subnet IP>
@@ -50,15 +53,20 @@ Port: <Sonarr port>
 API Key: <API key from dashboard>
 Base URL: sonarr
 ```
+
 4. Click `Load Qualities` and `Load Folders`. Your settings should load successfully.
 5. Choose your default quality and folder settings for shows added through Ombi.
 6. Submit
 
 :::
+
 ### Medusa
+
 :::panel
+
 1. Select SickRage from the TV Dropdown under settings.
 2. Use the following configuration:
+
 ```plaintext
 Enable: checked
 Hostname or IP: <subnet IP>
@@ -66,14 +74,19 @@ Port: <your medusa port>
 API Key: <your medusa API key>
 Base URL: medusa
 ```
+
 3. Choose a default quality profile.
 4. Submit
-:::
+   :::
+
 ### Radarr
+
 :::panel
+
 1. Select Radarr from the Movie Dropdown under settings.
 2. In order to configure Radarr, you must first have a root folder setup. If you haven't set up any root folders in Radarr, please add a show and setup your Sonarr root show directory first.
 3. Use the following configuration:
+
 ```plaintext
 Enable: checked
 Hostname or IP: <subnet IP>
@@ -81,6 +94,7 @@ Port: <Radarr port>
 API Key: <API key from dashboard>
 Base URL: radarr
 ```
+
 4. Click `Load Qualities` and `Load Folders`. Your settings should load successfully.
 5. Choose your default quality and folder settings for Movies added through Ombi.
 6. Submit

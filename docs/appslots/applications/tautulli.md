@@ -36,9 +36,11 @@ Upon visiting your Tautulli dashboard for the first time, the welcome wizard wil
 
 1. Sign in with Plex
 2. Input settings for Plex:
+
 ```plaintext main
 Plex IP: 127.0.0.1
 Post: <your plex port>
 ```
+
 3. Run through the rest of the wizard.
 4. Tautulli is now connected to Plex.

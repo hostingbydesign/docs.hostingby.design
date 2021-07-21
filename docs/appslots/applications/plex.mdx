@@ -31,7 +31,7 @@ On Windows, under PuTTY, you can paste with a right-click.
 On Linux, you'll need to use Control-Shift-V.
 :::
 
-Installation will take a few moments. Once it's done, you'll receive a notice that the installation is complete and the installer will let you know where you can access the application. (e.g. `https://app02.seedbox.io:7777/web`). 
+Installation will take a few moments. Once it's done, you'll receive a notice that the installation is complete and the installer will let you know where you can access the application. (e.g. `https://app02.seedbox.io:7777/web`).
 
 ## How to Access
 
@@ -41,14 +41,13 @@ As above, the Plex installer will output your personal port access at the end of
 If you forgot your personalized port, you can always access Plex from the "Plex" link on your dashboard, or you can re-discover your port programatically with the command `cat ~/.install/.plex.lock`. However, as long as your server has been claimed, it should always be viewable from your Plex Web dashboard at https://app.plex.tv/dashboard
 :::
 
-
 ## Service Management
 
 Like all box configured applications, you can manage Plex via SSH with box with start, stop, restart, enable and disable commands.
 
-import SystemdTabs from '../snippets/systemdtabs.mdx';
+import SystemdTabs from "../snippets/systemdtabs.mdx";
 
-<SystemdTabs service="plex"/>
+<SystemdTabs service="plex" />
 
 ## Configuration
 
@@ -72,21 +71,26 @@ If you skipped claiming of your Plex server during installation, you can still c
 If you've gotten this far, I'll assume you don't need any reminders on how to connect to the server via SSH ;) However, creating an SSH tunnel takes a bit more effort than simply creating an SSH Connection.
 
 #### Linux/OSX
-:::panel 
+
+:::panel
+
 1. Open a command prompt or terminal
 2. Enter the command: `ssh <username>@<hostname.io> -L 8888:localhost:<plexport>`
 3. Open your browser window and navigate to `http://localhost:8888/web`
 4. The browser will connect to your Plex server and let you know that there is an unclaimed server on your network.
-:::
+   :::
+
 #### Windows
+
 :::panel
+
 1. Open up your PuTTY client again.
 2. Under gateway, enter the hostname of your server, e.g.: `yourhostname.io`
 3. Configure the tunnel:
-    1. On the left hand side, navigate to `Connection > SSH > Tunnels`
-    2. Under source port, enter `8888`
-    3. Under destination, enter `localhost:<plexport>` 
-    4. Click `Add`
+   1. On the left hand side, navigate to `Connection > SSH > Tunnels`
+   2. Under source port, enter `8888`
+   3. Under destination, enter `localhost:<plexport>`
+   4. Click `Add`
 4. Connect to the server by clicking `Open`
 5. PuTTY will prompt you for your username and password like a regular SSH session.
 6. Once connected, open your browser and navitage to `http://localhost:8888/web`

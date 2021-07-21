@@ -13,11 +13,13 @@ That said, when looking over the options, **you should never adjust variables su
 :::
 
 ## Installation and Removal
+
 For all packages managed by box, the command to install a package is:
 
 ```bash
 box install <package name>
 ```
+
 Packages can also be removed with the command:
 
 ```bash
@@ -32,9 +34,9 @@ Please be aware that removing a package will remove **all** associated data with
 
 All box configured applications can be managed with start, stop, restart, enable and disable commands.
 
-import SystemdTabs from '../snippets/systemdtabs.mdx';
+import SystemdTabs from "../snippets/systemdtabs.mdx";
 
-<SystemdTabs service="btsync"/>
+<SystemdTabs service="btsync" />
 
 :::tip
 Enable and disable refer to whether or not the package should be started when the server is booted. `enable` means start at boot and `disable` means remove it auto start entries.

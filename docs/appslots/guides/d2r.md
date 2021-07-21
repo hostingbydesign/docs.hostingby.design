@@ -19,12 +19,13 @@ git clone "https://github.com/pyroscope/pyrocore.git" ~/.local/pyroscope
 ```
 
 Perl requires a dependency for rtorrent-fastresume so let's grab that too:
+
 ```
 cpan -fi Convert:Bencode_XS
 
 ```
 
-Please be aware that the tests run by the build of this module *can randomly fail*. You can probably safely ignore this.
+Please be aware that the tests run by the build of this module _can randomly fail_. You can probably safely ignore this.
 
 The setup will probably ask a few prompts:
 
