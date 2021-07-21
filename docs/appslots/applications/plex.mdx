@@ -70,33 +70,44 @@ If you skipped claiming of your Plex server during installation, you can still c
 
 If you've gotten this far, I'll assume you don't need any reminders on how to connect to the server via SSH ;) However, creating an SSH tunnel takes a bit more effort than simply creating an SSH Connection.
 
-#### Linux/OSX
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
-:::panel
+<Tabs
+  defaultValue="windows"
+  values={[
+    {label: 'Windows', value: 'windows'},
+    {label: 'Linux / OS X', value: 'linux'}
+  ]}>
+  <TabItem value="windows">
+ 
 
-1. Open a command prompt or terminal
-2. Enter the command: `ssh <username>@<hostname.io> -L 8888:localhost:<plexport>`
-3. Open your browser window and navigate to `http://localhost:8888/web`
-4. The browser will connect to your Plex server and let you know that there is an unclaimed server on your network.
-   :::
 
-#### Windows
+    1. Open up your PuTTY client again.
+    2. Under gateway, enter the hostname of your server, e.g.: `yourhostname.ltd`
+    3. Configure the tunnel:
+        1. On the left hand side, navigate to `Connection > SSH > Tunnels`
+        2. Under source port, enter <your plex port>
+        3. Under destination, enter localhost:8888
+        4. Click `Add`
+    4. Connect to the server by clicking `Open`
+    5. PuTTY will prompt you for your username and password like a regular SSH session.
+    6. Once connected, open your browser and navitage to http://localhost:8888/web
+    7. The browser will connect to your Plex server and let you know that there is an unclaimed server on your network.
 
-:::panel
+  </TabItem>
+  <TabItem value="linux">
 
-1. Open up your PuTTY client again.
-2. Under gateway, enter the hostname of your server, e.g.: `yourhostname.io`
-3. Configure the tunnel:
-   1. On the left hand side, navigate to `Connection > SSH > Tunnels`
-   2. Under source port, enter `8888`
-   3. Under destination, enter `localhost:<plexport>`
-   4. Click `Add`
-4. Connect to the server by clicking `Open`
-5. PuTTY will prompt you for your username and password like a regular SSH session.
-6. Once connected, open your browser and navitage to `http://localhost:8888/web`
-7. The browser will connect to your Plex server and let you know that there is an unclaimed server on your network.
-:::
-<!--END_DOCUSAURUS_CODE_TABS-->
+
+    1. Open a command prompt or terminal
+    2. Enter the command: ssh <username>@<hostname.ltd> -L 8888:localhost:<your plex port>
+    3. Open your browser window and navigate to http://localhost:8888/web
+    4. The browser will connect to your Plex server and let you know that there is an unclaimed server on your network.
+
+  </TabItem>
+
+
+</Tabs>
 
 ## Connect to other clients
 
