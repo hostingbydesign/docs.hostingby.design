@@ -17,12 +17,10 @@ module.exports = {
         src: 'img/logo.png',
       },
       items: [
-        {
-          to: '/',
-          activeBasePath: '/',
-          label: 'Docs',
-          position: 'left',
-        },
+        {to: '/', activeBasePath: '/', label: 'Docs', position: 'left',},
+        {href: 'https://seedbox.io', label: 'Home', position: 'right'},
+        {href: 'https://panel.seedbox.io/clientarea.php', label: 'Client Area', position: 'right'},
+        {href: 'https://panel.seedbox.io/serverstatus.php', label: 'Server Status', position: 'right'},
       ],
     },
     footer: {
@@ -30,6 +28,7 @@ module.exports = {
       links: [
       ],
       copyright: `Copyright © ${new Date().getFullYear()} HNielsen Networks.`,
+      
     },
   },
   presets: [
