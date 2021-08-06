@@ -34,4 +34,4 @@ Some notes about service files:
 - Unless you are bound to the subnet port, do not forget authentication!
 - If you are using an rc port, consider binding it to your subnet IP. You can easily communicate with your subnet ip via CLI
 - At least, choose a unique port. Consider binding to your subnet port whenever possible (fun fact: subnet bound ports are accessible from your wireguard VPN)
-- You need to start your mounts before the media center apps start, so you can try either a `Before=plex@tjmack` or a `PostStart=/usr/bin/sudo box restart plex`
+- You need to start your mounts before the media center apps start, so you can try either a `Before=plex@username` or a `PostStart=/usr/bin/sudo box restart plex`
