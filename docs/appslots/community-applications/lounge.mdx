@@ -1,0 +1,58 @@
+---
+id: lounge
+title: The Lounge
+sidebar_label: The Lounge
+---
+
+A frequently asked question we get from customers is if we have support for The Lounge. At the time of writing, we don't officially support it, but it can be installed using a script a community member has written.
+
+To follow this guide, you will need to SSH into your server. If you need help with this, please refer to the [how do I connect](../getting-started/how-do-i-connect.md) article.
+
+import Community from "../snippets/community.mdx";
+
+<Community />
+
+## Installation
+
+This installer will use your existing username and a password of your choice to secure The Lounge. Please consider [reading the script](https://gist.github.com/brettpetch/7945e3620503eaf3b6fcce44529ecc8f) before running it. The installer will output a port number with how to access The Lounge install on completion. Please remember this number.
+
+```bash
+bash <(curl -sL https://gist.github.com/brettpetch/7945e3620503eaf3b6fcce44529ecc8f/raw/ba4c9930b0f5261c0af8efecf94e17efde2e85a2/lounge.sh)
+```
+
+:::tip
+If something goes wrong during your install, please consider checking the logs. You may find them by running the following:
+
+```bash
+less -r +G ~/.logs/lounge.log
+```
+
+These can be helpful in cases where you need to see the output from installation.
+:::
+On first run, go to `https://<hostname.io>:<yourportnumber>` to access The Lounge. This should ask you for a login. You will also receive a warning about SSL, which can be ignored safely.
+
+## Controlling the Systemd Service
+
+import UserSystemd from "../snippets/usersystemd.mdx";
+
+<UserSystemd service="lounge" />
+
+## Troubleshooting
+
+#### I Can't Remember my Port Number
+
+Please run `grep port: ~/.thelounge/config.js`
+
+Your port number will be the first number.
+
+#### Viewing logs
+
+:::tip  
+For application specific logs, consider running the following:
+
+```bash
+systemctl --user status lounge
+```
+
+You can exit `less` by pressing `q` at any point.
+:::

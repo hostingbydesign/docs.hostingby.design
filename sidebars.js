@@ -61,6 +61,7 @@ module.exports = {
                 ],
               "Community Applications": [
                 "appslots/community-applications/filebrowser",
+                "appslots/community-applications/lounge",
                 "appslots/community-applications/overseerr",
                 "appslots/community-applications/requestrr"
               ],
