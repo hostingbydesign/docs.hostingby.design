@@ -69,7 +69,7 @@ chmod +x d2r.sh
 chmod +x rfr.pl
 ```
 
-As a Seedbox.io customer, you should not need to alter anything in either script.
+As a HostingByDesign customer, you should not need to alter anything in either script.
 
 ## Add the Script to Execute
 

@@ -16,7 +16,7 @@ Packages required: sshfs, sshpass, fuse
 **For a single use remote mapping (Connection will be lost upon reboot or if SFTP connection is dropped)**
 
 ```bash
-sudo sshfs <username)@<seedbox_id).seedbox.io:/ <mount path>)
+sudo sshfs <username>@<seedbox_id>.seedbox.io:/ <mount path>
 # ie
 $ mkdir ~/seedbox
 $ sshfs psbXXXXX@psbXXXXX.seedbox.io:/ ~/seedbox/
@@ -35,23 +35,21 @@ Create an sshpass shell script to automate the password prompt ie:
 ```bash
 $ sudoedit /opt/seedbox.sh
 !/bin/bash
-sshpass -p <seedbox_password) ssh $\*
+sshpass -p <seedbox_password> ssh $\*
 ```
 
 edit the system /etc/fstab to add your mount (uid/gid to match the user id of mount owner)
 
 ```bash
 $ sudoedit /etc/fstab
-sshfs#(username)@(seedbox_id).seedbox.io:/ (mount path) fuse ssh_command=/opt/seedbox.sh,uid=(gid),gid=(gid),users,idmap=user,x-systemd.automount,noatime,allow_other,netdev,auto_cache,reconnect 0 0
+sshfs#<username>@<seedbox_id>.seedbox.io:/ <mount path> fuse ssh_command=/opt/seedbox.sh,uid=<gid>,gid=<gid>,users,idmap=user,x-systemd.automount,noatime,allow_other,netdev,auto_cache,reconnect 0 0
 ```
 
-```plaintext
-(username) = your seedbox's username ie psbXXXXX
-(seedbox_id) = your seedbox's hostname ie psbXXXXX
-(mount path) = Your mount location, ie, /mnt/seedbox
-(uid) = system user id of the mount owner (preferabley a daemon user, sonarr/radarr etc)
-(gid) = system group id of the mount owner (preferabley a daemon user, sonarr/radarr etc)
-```
+- `<username>` = your seedbox's username ie psbXXXXX
+- `<seedbox_id>` = your seedbox's hostname ie psbXXXXX
+- `<mount path>` = Your mount location, ie, /mnt/seedbox
+- `<uid>` = system user id of the mount owner (preferabley a daemon user, sonarr/radarr etc)
+- `<gid>` = system group id of the mount owner (preferabley a daemon user, sonarr/radarr etc)
 
 activate the auto mount (once) via:
 

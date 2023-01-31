@@ -46,7 +46,7 @@ If you prefer, and alternate client called [TunSafe](https://tunsafe.com/downloa
 
 ### Client Setup
 
-Wireguard is available on many platforms. Setting it up for use with your Seedbox.io configuration should be fairly straight-forward, but in case you need a littl help getting your client setup, here are some instructions for popular operating systems.
+Wireguard is available on many platforms. Setting it up for use with your HostingByDesign configuration should be fairly straight-forward, but in case you need a littl help getting your client setup, here are some instructions for popular operating systems.
 
 #### Linux / OS X
 
@@ -60,7 +60,7 @@ sudo chmod 600 /etc/wireguard/wg0.conf
 sudo wg-quick up wg0
 ```
 
-2. Wireguard should now be up and tunnelling all you traffic through Seedbox.io.
+2. Wireguard should now be up and tunnelling all you traffic through HostingByDesign.
 3. [Check your IP Address](https://duckduckgo.com/?q=ip+address&ia=answer). It should now reflect your shared or dedicated IP for your slot.
 
 4. On Linux systems, you can configure a systemd service to automatically run and enable this configuration on each boot:
@@ -75,7 +75,7 @@ sudo systemctl enable wg-quick@wg0
 
 :::panel
 
-1. Copy-paste the contents of the client configuration outputted at the end of configuration into a file onto your local desktop,eg: `Seedbox.io.conf.d`
+1. Copy-paste the contents of the client configuration outputted at the end of configuration into a file onto your local desktop,eg: `HostingByDesign.conf.d`
 
 2. Open TunSafe, click and drag the configuration file you just created to the TunSafe window. TunSafe will automatically import the client configuration and connect. Easy!
 

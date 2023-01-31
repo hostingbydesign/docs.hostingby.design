@@ -12,7 +12,8 @@ In order to use the installer and management functions on your slot, you'll need
 `box` has several functions, which we'll go over here:
 - help
 - list
-- install/remove
+- install
+- remove
 - chpasswd
 - service management
 - bw
@@ -33,12 +34,20 @@ Syntax:
 box list
 ```
 
-## install / remove
-The commands used to install and remove applications from the server. If you need help with specific commands, they are available on the application sub-pages here.
+## install
+The commands used to install applications from the server. If you need help with specific commands, they are available on the application sub-pages here.
 
 Syntax:
 ```bash
 box install rtorrent
+```
+
+## remove
+The commands used to remove applications from the server. If you need help with specific commands, they are available on the application sub-pages here.
+
+Syntax:
+```bash
+box remove rtorrent
 ```
 
 ## chpasswd
@@ -50,7 +59,8 @@ box chpasswd
 ```
 
 ## Service Management
-You can manipulate service status with `start/stop/restart/enble/disable`. These commands will send the info straight to `systemctl`
+You can manipulate service status with `start/stop/restart/enble/disable`. These commands will send the info straight to `systemctl`.
+
 import SystemdTabs from '../snippets/systemdtabs.mdx';
 
 <SystemdTabs service="wireguard"/>

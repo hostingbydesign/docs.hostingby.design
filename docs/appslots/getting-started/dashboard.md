@@ -9,7 +9,7 @@ The dashboard is a graphical user interface which provides a central location fo
 ## How to Access
 The dashboard is available at the web root for the server you've been assigned to:
 
-`https://<hostname.io>`
+`https://<hostname.hostingby.design>`
 
 ## Features
 

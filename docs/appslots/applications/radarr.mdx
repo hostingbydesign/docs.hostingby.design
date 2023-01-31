@@ -60,13 +60,13 @@ Radarr only supports a few trackers out of the box, but the indexers can be expa
 By default, when receivng the torznab feed from Jackett, it will need to be modified to be connected with the application. The default link looks like:
 
 ```plaintext
-https://app02.seedbox.io/jackett/api/v2.0/indexers/yourtracker/results/torznab/
+https://app02.hostingby.design/jackett/api/v2.0/indexers/yourtracker/results/torznab/
 ```
 
 We need to edit this link to **remove https** and **add the port number**. Thus, if your port number was `12345`, your editted URL would look like this:
 
 ```plaintext
-http://app02.seedbox.io:12345/jackett/api/v2.0/indexers/yourtracker/results/torznab/
+http://app02.hostingby.design:12345/jackett/api/v2.0/indexers/yourtracker/results/torznab/
 ```
 
 :::

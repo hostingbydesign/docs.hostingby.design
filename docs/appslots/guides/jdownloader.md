@@ -4,7 +4,7 @@ title: Install JDownloader 2 Headless
 sidebar_label: Install JDownloader
 ---
 
-JDownloader is a download manager, written in Java, which allows automatic download of groups of files from one-click hosting sites. While not explicitly supported by Seedbox.io, it's easy to setup yourself in your user environment without the need for root or other system packages.
+JDownloader is a download manager, written in Java, which allows automatic download of groups of files from one-click hosting sites. While not explicitly supported by HostingByDesign, it's easy to setup yourself in your user environment without the need for root or other system packages.
 
 ## Setup and Installation
 
