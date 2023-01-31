@@ -15,13 +15,13 @@ module.exports = {
       defaultMode: "dark",
     },
     navbar: {
-      title: '',
+      title: 'HostingByDesign',
       logo: {
         alt: 'HostingByDesign Logo',
-        src: 'img/logo.png',
+        src: 'img/logo-bare.png',
       },
       items: [
-        {to: '/', activeBasePath: '/', label: 'Docs', position: 'left',},
+        // {to: '/', activeBasePath: '/', label: 'Docs', position: 'left',},
         {href: 'https://hostingby.design', label: 'Home', position: 'right'},
         {href: 'https://panel.hostingby.design/clientarea.php', label: 'Client Area', position: 'right'},
         {href: 'https://panel.hostingby.design/serverstatus.php', label: 'Server Status', position: 'right'},
