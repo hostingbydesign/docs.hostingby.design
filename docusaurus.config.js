@@ -7,8 +7,9 @@ module.exports = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.png',
-  organizationName: 'hnielsen-networks', // Usually your GitHub org/user name.
-  projectName: 'HostingByDesign', // Usually your repo name.
+  organizationName: 'hostingbydesign', // Usually your GitHub org/user name.
+  projectName: 'docs.hostingby.design', // Usually your repo name.
+  trailingSlash: false,
   themeConfig: {
     navbar: {
       title: '',
