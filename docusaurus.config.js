@@ -11,6 +11,9 @@ module.exports = {
   projectName: 'docs.hostingby.design', // Usually your repo name.
   trailingSlash: false,
   themeConfig: {
+    colorMode: {
+      defaultMode: "dark",
+    },
     navbar: {
       title: '',
       logo: {
