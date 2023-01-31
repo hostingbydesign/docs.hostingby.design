@@ -39,7 +39,7 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           editUrl:
-            'https://github.com/hostingbydesign/docs.hostingby.design',
+            'https://github.com/hostingbydesign/docs.hostingby.design/tree/master',
           routeBasePath: '/',
         },
         theme: {
