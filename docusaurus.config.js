@@ -23,8 +23,8 @@ module.exports = {
       items: [
         // {to: '/', activeBasePath: '/', label: 'Docs', position: 'left',},
         {href: 'https://hostingby.design', label: 'Home', position: 'right'},
-        {href: 'https://panel.hostingby.design/clientarea.php', label: 'Client Area', position: 'right'},
-        {href: 'https://panel.hostingby.design/serverstatus.php', label: 'Server Status', position: 'right'},
+        {href: 'https://my.hostingby.design/', label: 'Client Area', position: 'right'},
+        {href: 'https://my.hostingby.design/serverstatus.php', label: 'Server Status', position: 'right'},
       ],
     },
     footer: {
