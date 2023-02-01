@@ -63,7 +63,6 @@ module.exports = {
                 "appslots/community-applications/filebrowser",
                 "appslots/community-applications/lounge",
                 "appslots/community-applications/overseerr",
-                "appslots/community-applications/requestrr"
               ],
               Guides: [
                 "appslots/guides/d2r",
