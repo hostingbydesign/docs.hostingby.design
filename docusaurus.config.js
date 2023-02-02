@@ -10,6 +10,7 @@ module.exports = {
   organizationName: 'hostingbydesign', // Usually your GitHub org/user name.
   projectName: 'docs.hostingby.design', // Usually your repo name.
   trailingSlash: false,
+  staticDirectories: ['public', 'static'],
   themeConfig: {
     colorMode: {
       defaultMode: "dark",
