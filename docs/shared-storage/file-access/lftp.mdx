@@ -13,23 +13,23 @@ lftp -u username,password -e 'mirror -v -c -P 6 --Remove-source-files /source/fo
 ```
 
 ```plaintext
--u = username[,password]
+-u = username[,password]
 
--e = initiates a command (must be followed by one)
+-e = initiates a command (must be followed by one)
 
-mirror  can download or update a whole directory tree
+mirror  can download or update a whole directory tree
 
--v = verbose (you get an output about whats happening, e.g. filelist and speed)
+-v = verbose (you get an output about whats happening, e.g. filelist and speed)
 
--c = continue filetransfer if previously been disrupted or had to be stopped
+-c = continue filetransfer if previously been disrupted or had to be stopped
 
--P 6 = download 6 files simultaneously (obviously you can set this higher or lower. try starting with 2 or 3 and see what your connection can handle)
+-P 6 = download 6 files simultaneously (obviously you can set this higher or lower. try starting with 2 or 3 and see what your connection can handle)
 
---Remove-source-files = self explaining i guess
+--Remove-source-files = self explaining i guess
 
-/source/folder/ = folder on your seedbox you want to download
+/source/folder/ = folder on your seedbox you want to download
 
-/destination/folder/ = where to put it on your home/destination machine
+/destination/folder/ = where to put it on your home/destination machine
 ```
 
 Please note that in the above, remove-source-files will delete data on our server once the file has been downloaded, if you wish to keep the files there, then remove that option.
