@@ -13,7 +13,8 @@ module.exports = {
             'pre-sales/refund',
             'pre-sales/switching',
             'pre-sales/premium-traffic',
-            'pre-sales/dedicated-ip'
+            'pre-sales/dedicated-ip',
+            'pre-sales/data-retention-policy'
           ],
         },
         {
