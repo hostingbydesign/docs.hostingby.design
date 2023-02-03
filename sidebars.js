@@ -12,7 +12,6 @@ module.exports = {
             'pre-sales/notes-cc',
             'pre-sales/refund',
             'pre-sales/switching',
-            'pre-sales/premium-traffic',
             'pre-sales/dedicated-ip',
             'pre-sales/data-retention-policy'
           ],
