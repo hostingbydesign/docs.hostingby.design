@@ -6,19 +6,24 @@ sidebar_label: Getting started with box
 
 `box` is a homegrown application that will help you install applications on your server and manage their services.
 
-## Introduction
+This is only available via [SSH](./how-do-i-connect).
+
+## Commands
+
 In order to use the installer and management functions on your slot, you'll need to use the included management script: `box`.
 
 `box` has several functions, which we'll go over here:
-- help
-- list
-- install
-- remove
-- chpasswd
-- service management
-- bw
 
-## help
+- `help`
+- `list`
+- `install`
+- `remove`
+- `chpasswd`
+- `service management`
+- `bw`
+
+### help
+
 The function of help is basic: provide you usage details on how to use box and the commands available to you.
 
 Syntax:
@@ -26,7 +31,8 @@ Syntax:
 box help
 ```
 
-## list
+### list
+
 This function lists the applications currently available for installation and a quick description of the application.
 
 Syntax:
@@ -34,7 +40,8 @@ Syntax:
 box list
 ```
 
-## install
+### install
+
 The commands used to install applications from the server. If you need help with specific commands, they are available on the application sub-pages here.
 
 Syntax:
@@ -42,7 +49,8 @@ Syntax:
 box install rtorrent
 ```
 
-## remove
+### remove
+
 The commands used to remove applications from the server. If you need help with specific commands, they are available on the application sub-pages here.
 
 Syntax:
@@ -50,7 +58,8 @@ Syntax:
 box remove rtorrent
 ```
 
-## chpasswd
+### chpasswd
+
 Use this command when you'd like to change your password. `chpasswd` will change the password for SSH, FTP, HTTP and Deluge.
 
 Syntax:
@@ -58,14 +67,14 @@ Syntax:
 box chpasswd
 ```
 
-## Service Management
+### Service Management
 You can manipulate service status with `start/stop/restart/enble/disable`. These commands will send the info straight to `systemctl`.
 
 import SystemdTabs from '../snippets/systemdtabs.mdx';
 
 <SystemdTabs service="wireguard"/>
 
-## bw
+### bw
 You can get a picture of your current bandwidth usage for the month with this command.
 
 Syntax:
