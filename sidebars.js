@@ -35,7 +35,8 @@ module.exports = {
                 'appslots/getting-started/dashboard',
                 'appslots/getting-started/box-basics',
                 'appslots/getting-started/abuse',
-                'appslots/getting-started/bandwith'
+                'appslots/getting-started/bandwith',
+                'appslots/getting-started/ftp-bouncer'
               ],
               Applications: [
                 "appslots/applications/application-basics",
