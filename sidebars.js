@@ -69,6 +69,7 @@ module.exports = {
               Guides: [
                 "appslots/guides/d2r",
                 "appslots/guides/flexget",
+                "appslots/guides/kodi",
                 "appslots/guides/mktorrent",
                 "appslots/guides/systemd"
               ],
