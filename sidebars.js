@@ -28,6 +28,7 @@ module.exports = {
         {
           type: 'category',
           label: 'Application hosting',
+          collapsed: false,
           items: [
             {
               "Getting Started": [
