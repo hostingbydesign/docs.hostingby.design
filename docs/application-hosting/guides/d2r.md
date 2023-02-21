@@ -12,18 +12,21 @@ Enter the Deluge to rTorrent script!
 
 First off, this method requires `rtxmlrpc` from the pyrocore tools suite, so let's go ahead and grab that now!
 
-```
-mkdir -p ~/bin ~/.local
-git clone "https://github.com/pyroscope/pyrocore.git" ~/.local/pyroscope
-~/.local/pyroscope/update-to-head.sh
-```
+Create directory
+
+    mkdir -p ~/bin ~/.local
+
+Clone repo
+
+    git clone https://github.com/pyroscope/pyrocore.git ~/.local/pyroscope
+
+Run update
+
+    ~/.local/pyroscope/update-to-head.sh
 
 Perl requires a dependency for rtorrent-fastresume so let's grab that too:
 
-```
-cpan -fi Convert:Bencode_XS
-
-```
+    cpan -fi Convert:Bencode_XS
 
 Please be aware that the tests run by the build of this module _can randomly fail_. You can probably safely ignore this.
 
@@ -40,14 +43,14 @@ Make sure you choose local::lib -- you don't have sudo permissions!
 
 Now ensure all the changes we just made are loaded in your path and current session:
 
-```
+```shell
 echo "export PATH=~/bin:~/.local/bin:${PATH}" >> ~/.bashrc
 source ~/.bashrc
 ```
 
 Create the pyrocore config to prevent errors being thrown at you:
 
-```
+```shell
 pyroadmin --create-config
 ```
 
@@ -55,14 +58,14 @@ pyroadmin --create-config
 
 If it does not exist, create the `~/bin` folder and change to the directory:
 
-```
+```shell
 mkdir ~/bin
 cd bin
 ```
 
 Grab the supporting scripts and set execute permissions:
 
-```
+```shell
 wget https://raw.githubusercontent.com/Danlabs/kb-scripts/master/deluge-to-rtorrent/d2r.sh
 wget https://raw.githubusercontent.com/Danlabs/kb-scripts/master/deluge-to-rtorrent/rfr.pl
 chmod +x d2r.sh
