@@ -1,0 +1,31 @@
+---
+id: ftp-bouncer
+title: FTP bouncer service
+sidebar_label: FTP bouncers
+---
+
+If you are experiencing slow throughput via FTP when you are sending/downloading data off our servers, then you can use the below bouncer servers to try and get around poor peering.
+
+The service requires a custom domain name when you wish to login, so please check below.
+
+- Username: `<username>@X.d.itsby.design` (Where X refers to the server you are on, fx 8.d if you are on that server, you can find the server in your welcome email and inside the clientarea)
+- Password: `<regular password for ftp>`
+
+As for hostnames on the bouncer nodes, ie the server you have to actually connect to:
+
+| Location    | Hostname                    | Details                                                                            |
+| ----------- | --------------------------- | ---------------------------------------------------------------------------------- |
+| Amsterdam   | `bouncer.ams.nl.seedbox.io` | Hosted out of Leaseweb, 10Gbit premium network                                     |
+| Paris       | `bouncer.par.fr.seedbox.io` | Hosted out of Online.net - Upgraded network 1Gbit                                  |
+| Falkenstein | `bouncer.fra.de.seedbox.io` | Hosted out of Hetzner 1Gbit                                                        |
+| Singapore   | `bouncer.sg.seedbox.io`     | Hosted at digitalocean - Soon to be moved to Leaseweb SG                           |
+| Sydney      | `bouncer.syd.au.seedbox.io` | Generic unmetered VPS, not optimal but its a tricky place to get lots of datausage |
+| Canada      | `bouncer.to.ca.seedbox.io`  | OVH Ultimate 2Gbit                                                                 |
+| US WEST     | `bouncer.ca.us.seedbox.io`  | OVH Ultimate 2Gbit                                                                 |
+| US EAST     | `bouncer.ny.us.seedbox.io`  | OVH Ultimate 2Gbit                                                                 |
+
+:::caution
+Please also note that the bouncers ONLY support FTPS (Explicit TLS) on port 21, it does not serve SFTP or Impicit SSL.
+:::
+
+As another side note, it is not always a given that the bouncer nodes are an improvement to you, we place no guarantees on the throughput.
