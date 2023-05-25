@@ -87,9 +87,10 @@ import TabItem from "@theme/TabItem";
     2. Under gateway, enter the hostname of your server, e.g.: `yourhostname.ltd`
     3. Configure the tunnel:
         1. On the left hand side, navigate to `Connection > SSH > Tunnels`
-        2. Under source port, enter <your plex port>
-        3. Under destination, enter localhost:8888
-        4. Click `Add`
+        2. Under source port, enter 8888
+        3. Login via SSH and issue this command without the quotes "cat ~/.install/.plex.lock"
+        4. Under destination, enter localhost:<plex-port> (plex-port is the number shown in step 3 with the command)
+        5. Click `Add`
     4. Connect to the server by clicking `Open`
     5. PuTTY will prompt you for your username and password like a regular SSH session.
     6. Once connected, open your browser and navitage to http://localhost:8888/web
