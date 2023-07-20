@@ -22,6 +22,10 @@ Please make sure to finish the setup of the application through the web browser,
 
 You can access jellyfin through `https://appxx.lw.hostingby.design/<yourusername>/jellyfin`.
 
+## Library management
+
+By default, you home directory will be mounted in Jellyfin as `/data/`. There you will find all of the files from your home directory. If you setup an application like l3uddz autoscan with the *arrs, you may need to use a `rewrite rule` to replace `/home/username` with `/data`.
+
 ## User management
 
 Jellyfin manages its users in a separate database. Please use the Web-UI to manage users and media.
