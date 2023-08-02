@@ -13,7 +13,7 @@ For that purpose, you can use [this](https://github.com/toomanynights/seedbox_ne
 
 ## What it gives?
 
-![enter image description here](https://i.imgur.com/sIkzSsr.png)
+![Network helper](https://i.imgur.com/sIkzSsr.png)
 ### Daily limit
 This is how much data you can afford to transfer daily. If you stay within this limit, then by the end of your billing month you'll spend just as much traffic as you're given by your plan.
 
@@ -36,7 +36,12 @@ For example: your recommended daily consumption is 300Gb. Today is the second da
 3. Choose "Install".
 4. On TamperMonkey Dashboard page, click on "Seedbox dashboard improvement" title.
 5. On top of the script, you have 4 variables to set:
+
 **cutoffDay** (mandatory) - provide your billing day (number of a day of month when you're billed for your seedbox). Make sure to change it to your own, or it will not work properly.
+
 **speedAllowance** - affects "Recommended speed" (see the appropriate section above); this is how much extra speed allowed on top of a pure 100% load calculation. Default: 0.1 (10%)
+
 **usedMinAllowance** - affects "Summary": how many days do you need to have in reserve so the script would recommend to increase upload speed. Here, bigger number means more strict recommendation. If your recommended daily consumption is 300Gb, and you put a number **3** here, the script will not recommend to increase your upload speed until you are 900Gb behind the threshold.
-**usedMinAllowance** - affects "Summary": how many days do you need to lack so the script would recommend to decreaseupload speed. Here, bigger number means more relaxed recommendation. If your recommended daily consumption is 300Gb, and you put a number **3** here, the script will not recommend to decrease your upload speed until you are 900Gb in front of the threshold.
+
+**usedMinAllowance** - affects "Summary": how many days do you need to lack so the script would recommend to decrease upload speed. Here, bigger number means more relaxed recommendation. If your recommended daily consumption is 300Gb, and you put a number **3** here, the script will not recommend to decrease your upload speed until you are 900Gb in front of the threshold.
+
