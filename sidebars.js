@@ -73,6 +73,7 @@ module.exports = {
             "application-hosting/guides/kodi",
             "application-hosting/guides/mktorrent",
             "application-hosting/guides/systemd",
+            "application-hosting/guides/network_userscript",
           ],
         },
       ],
