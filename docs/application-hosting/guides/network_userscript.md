@@ -3,6 +3,11 @@ id: network_userscript
 title: Network consumption helper script
 sidebar_label: Network helper
 ---
+:::tip Please Note 
+This guide is written by a community member, support for this will solely be via our discord community
+
+:::
+
 
 ## Introduction
 
