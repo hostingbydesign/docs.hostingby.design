@@ -39,7 +39,7 @@ module.exports = {
             "application-hosting/getting-started/bandwith",
             "application-hosting/getting-started/ftp-bouncer",
           ],
-          Applications: [
+          "Applications (Official)": [
             "application-hosting/applications/application-basics",
             "application-hosting/applications/rtorrent",
             "application-hosting/applications/deluge",
@@ -62,12 +62,12 @@ module.exports = {
             "application-hosting/applications/wireguard",
             "application-hosting/applications/plex-tunnel",
           ],
-          "Community Applications": [
+          "Applications (Community)": [
             "application-hosting/community-applications/filebrowser",
             "application-hosting/community-applications/lounge",
             "application-hosting/community-applications/overseerr",
           ],
-          Guides: [
+          "Guides (How To's)": [
             "application-hosting/guides/d2r",
             "application-hosting/guides/flexget",
             "application-hosting/guides/kodi",
