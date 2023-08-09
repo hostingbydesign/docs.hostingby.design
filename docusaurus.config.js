@@ -32,7 +32,7 @@ module.exports = {
       style: 'dark',
       links: [
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} HNielsen Networks.`,
+      copyright: `Copyright © ${new Date().getFullYear()} HNielsen Technologies ApS.`,
       
     },
   },
