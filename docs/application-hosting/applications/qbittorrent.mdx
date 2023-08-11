@@ -72,6 +72,31 @@ tar -xvf /tmp/qbittorrent-cli.tar.gz --exclude={CHANGELOG.md,README.md} -C ~/bin
 curl -Ls https://gitlab.com/AlexKM/qbittools/-/raw/master/install.sh | bash -s -- -o ~/bin/qbittools
 ```
 
+## Installing qBittorrent Plugins
+
+As a modern app, qBittorrent has support for Plugins. You can find these Plugins from the qBittorrent GitHub page [here](https://github.com/qbittorrent/search-plugins/wiki). Here is the tutorial on how to install these.
+
+First step is to Download one of the Plugins from the link provided, they are under Unofficial Search Plugins for example. Once you have Downloaded one, it needs to be added manually via FTP (or SSH if you so choose) to a specific folder as the Browser installation method does not work.
+
+##### FTP
+1. Click the Download Link on the Github page to Download one of the Plugins, it will have a .py extension.
+2. Move the file into this folder:
+```/home/<username>/.local/share/qBittorrent/nova3/engines```
+3. You may need to restart qBittorrent for the Plugin to show up.
+
+##### SSH
+1. SSH into your slot, you can find a tutorial on how to achieve this [here](https://docs.hostingby.design/application-hosting/getting-started/how-do-i-connect).
+2. Issue this command:
+```cd ~/.local/share/qBittorrent/nova3/engines```
+3. Open your browser and go to the link in the beginning of this tutorial where the Plugins are listed. Select one Plugin and Right Click on the Download Link, select Copy Link.
+4. Go back into your SSH window and issue this command:
+```wget <the link you copied from your browser>```
+:::tip
+If using PuTTy, right clicking with your mouse will act as paste, using ctrl+v will not work.
+:::
+5. After you have the link added, just hit Enter and let it download the .py file. 
+6. You may require to restart qBittorrent for the Plugin to show up.
+
 ## Troubleshooting
 
 :::tip
