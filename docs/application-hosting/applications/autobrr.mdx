@@ -1,0 +1,35 @@
+---
+id: autobrr
+title: Autobrr
+sidebar_label: Autobrr
+---
+
+Autobrr is the modern download automation tool for torrents, replacing and expanding on the capabilities of Autodl-Irssi.
+
+## Initial Setup
+
+First you must connect to your slot via ssh. If you need help connecting to the server, please read the help article [here](../getting-started/how-do-i-connect.md).
+
+Installing Autobrr is easy. Simply issue the following command:
+
+```plaintext main
+box install autobrr
+```
+
+This command will configure and install autobrr.
+
+## How to Access
+
+Once setup, Autobrr will be available at the link `https://<hostname.design>/autobrr`
+
+## Service Management
+
+Like all box configured applications, you can manage Autobrr via SSH with box with start, stop, restart, enable and disable commands.
+
+import SystemdTabs from "../snippets/systemdtabs.mdx";
+
+<SystemdTabs service="autobrr" />
+
+## Configuration
+
+For help with configuration, you can check the Official Documentation for Autobrr at the link `https://autobrr.com/introduction` or join the Official Discord for Autobrr at the link `https://discord.gg/WQ2eUycxyT`
