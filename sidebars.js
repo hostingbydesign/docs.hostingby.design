@@ -41,6 +41,7 @@ module.exports = {
           ],
           "Applications (Official)": [
             "application-hosting/applications/application-basics",
+            "application-hosting/applications/autobrr",
             "application-hosting/applications/rtorrent",
             "application-hosting/applications/deluge",
             "application-hosting/applications/qbittorrent",
