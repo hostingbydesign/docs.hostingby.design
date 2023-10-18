@@ -69,6 +69,7 @@ module.exports = {
             "application-hosting/community-applications/overseerr",
           ],
           "Guides (How To's)": [
+            "application-hosting/guides/iplookup",
             "application-hosting/guides/d2r",
             "application-hosting/guides/flexget",
             "application-hosting/guides/kodi",
