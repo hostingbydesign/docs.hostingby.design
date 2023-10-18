@@ -10,5 +10,6 @@ Below you'll see the command required to locate the IP assigned to your applicat
 
 ## Get your IP (We only provide IPv4 at this time)
 
-```curl -4 icanhazip.com
+```bash
+curl -4 icanhazip.com
 ```
