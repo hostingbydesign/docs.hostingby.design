@@ -1,7 +1,7 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
   title: 'HostingByDesign Docs',
-  tagline: 'Make the best of your seedbox',
+  tagline: 'Make the best of your service',
   url: 'https://docs.hostingby.design',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -26,6 +26,7 @@ module.exports = {
         {href: 'https://hostingby.design', label: 'Home', position: 'right'},
         {href: 'https://my.hostingby.design/', label: 'Client Area', position: 'right'},
         {href: 'https://my.hostingby.design/serverstatus.php', label: 'Server Status', position: 'right'},
+        {href: 'https://discord.gg/wv67teS', label: 'Discord', position: 'right'},
       ],
     },
     footer: {
