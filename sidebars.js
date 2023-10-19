@@ -19,14 +19,6 @@ module.exports = {
     },
     {
       type: "category",
-      label: "Getting Started",
-      items: [
-        "getting-started/introduction-c",
-        "getting-started/login-details",
-      ],
-    },
-    {
-      type: "category",
       label: "Application hosting",
       collapsed: false,
       items: [
