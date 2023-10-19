@@ -20,7 +20,7 @@ module.exports = {
     {
       type: "category",
       label: "Application hosting",
-      collapsed: false,
+      collapsed: true,
       items: [
         {
           "Getting Started": [
@@ -75,7 +75,7 @@ module.exports = {
     {
       type: "category",
       label: "Dedicated servers",
-      collapsed: false,
+      collapsed: true,
       items: [
         {
           "Getting Started": [
