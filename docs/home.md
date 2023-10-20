@@ -19,4 +19,4 @@ We're only a click of a button away in our support queues, visit us here to subm
 
 Did you know that our documentation is open and contribution is available to everyone? If you have an idea, a guide, something you want to let other people benefit from, then please PR it on our github!
 
-[github](https://github.com/hostingbydesign/docs.hostingby.design)
+[Click here to contribute!](https://github.com/hostingbydesign/docs.hostingby.design)
