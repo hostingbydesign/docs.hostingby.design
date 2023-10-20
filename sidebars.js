@@ -7,6 +7,7 @@ module.exports = {
     {
       type: "category",
       label: "Pre-Sales",
+      collapsed: false,
       items: [
         "pre-sales/payment-methods",
         "pre-sales/notes-cc",
