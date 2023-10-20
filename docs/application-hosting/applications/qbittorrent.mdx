@@ -28,9 +28,13 @@ import SystemdTabs from "../snippets/systemdtabs.mdx";
 
 ## Connecting to other Software:
 
-### Connecting to a remote client (i.e. Sonarr)
+### Connecting to qbittorrent from a service not hosted on the service.
 
-Open up the web-gui, as listed above. Click the settings gear icon located in the top left menu. Click Web UI, then copy the port number listed.
+:::caution
+If you've changed the password from the one we have provided then please make sure to use a secure password, the below option will open up your client to the internet without our safety measurements.
+:::
+
+Open up the web-gui, as listed above. Click the settings gear icon located in the top left menu. Click Web UI, change the bind IP address to a * (For all IPs), then copy the webui port.
 
 You can now connect to your qBittorrent instance through `http://<hostname.io>:<qbittorrent-port>` with normal qbittorrent authenication measures rather than nginx-forwarded plain http authenticaiton.
 
