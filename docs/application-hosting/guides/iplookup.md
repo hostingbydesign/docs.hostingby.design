@@ -14,4 +14,4 @@ Below you'll see the command required to locate the IP assigned to your applicat
 curl -4 icanhazip.com
 ```
 
-Run the above command via SSH - To get into the server via SSH you can follow this guide: [Here](,,/getting-started/how-do-i-connect.md)
+Run the above command via SSH - To get into the server via SSH you can follow this guide: [Here](../getting-started/how-do-i-connect.md)
