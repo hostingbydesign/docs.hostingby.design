@@ -1,0 +1,13 @@
+---
+id: promotion
+title: Promotion sales
+sidebar_label: Promotion sales
+---
+
+This page will be a small overview of our terms when you signup using a promotion code.
+
+- If you purchase a service with the intention of replacing your existing HBD service, then please note that we do not provide support for migrations - For that we have a guide here that you can [follow](https://docs.hostingby.design/application-hosting/guides/migration)
+- If you purchase a service and wish to have a migration done from another vendor, then we'll only provide a data migration and only minimal application migrations are included in the support scope.
+- Promotion services are not included in our refund policy.
+
+Should the above give any questions then you are more than welcome to reach out via [ticket](https://my.hostingby.design/submitticket.php?step=2&deptid=2) or email and we'll do our best to explain.
