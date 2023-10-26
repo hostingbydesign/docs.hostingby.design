@@ -69,6 +69,7 @@ module.exports = {
             "application-hosting/guides/mktorrent",
             "application-hosting/guides/systemd",
             "application-hosting/guides/network_userscript",
+            "application-hosting/guides/migration",
           ],
         },
       ],
