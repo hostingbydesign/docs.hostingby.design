@@ -47,9 +47,11 @@ Scroll down the screen with your arrow keys until you see the section below.
 ![bouncers 1](../../assets/installimage-partitions.png)
 
 Here you can modify your partitions. What we typically do is we install everything on the Root partition, so modify the field to read:
-```PART swap swap 32G
+```
+PART swap swap 32G
 PART /boot ext3 1024M
-PART / ext4 all```
+PART / ext4 all
+```
 
 Remove the part that says **PART /home ext4 all** and modify PART / ext4 XXXXM to read all instead.
 
