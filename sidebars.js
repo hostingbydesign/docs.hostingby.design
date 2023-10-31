@@ -87,6 +87,7 @@ module.exports = {
             "dedicated-servers/getting-started/ftp-bouncer",
             "dedicated-servers/getting-started/leaseweb-reinstall",
             "dedicated-servers/getting-started/hetzner-reinstall",
+            "dedicated-servers/getting-started/ipv6-setup",
           ],
         },
       ],
