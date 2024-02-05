@@ -41,6 +41,7 @@ module.exports = {
             "application-hosting/applications/medusa",
             "application-hosting/applications/sonarr",
             "application-hosting/applications/radarr",
+            "application-hosting/applications/prowlarr",
             "application-hosting/applications/lidarr",
             "application-hosting/applications/bazarr",
             "application-hosting/applications/jackett",

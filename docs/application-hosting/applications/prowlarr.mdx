@@ -1,0 +1,65 @@
+---
+id: prowlarr
+title: Prowlarr
+sidebar_label: Prowlarr
+---
+
+Prowlarr is an indexer manager/proxy built on the popular *arr .net/reactjs base stack to integrate with your various PVR apps. Prowlarr supports management of both Torrent Trackers and Usenet Indexers. It integrates seamlessly with Lidarr, Mylar3, Radarr, Readarr, and Sonarr offering complete management of your indexers with no per app Indexer setup required (we do it all).
+
+## Initial Setup
+
+First you must connect to your slot via ssh. If you need help connecting to the server, please read the help article [here](../getting-started/how-do-i-connect.md).
+
+Installing Prowlarr is easy. Simply issue the following command:
+
+```plaintext main
+box install prowlarr
+```
+
+This command will configure Prowlarr for your user.
+
+## How to Access
+
+After Prowlarr has been installed, it will be available for access at `https://<hostname.io>/prowlarr`.
+
+## Service Management
+
+Like all box configured applications, you can manage Prowlarr via SSH with box with start, stop, restart, enable and disable commands.
+
+import SystemdTabs from "../snippets/systemdtabs.mdx";
+
+<SystemdTabs service="prowlarr" />
+
+## Configuration
+
+Out of the box, Prowlarr comes with very little configuration. Following are some basic tasks to help get your client up and running:
+
+### Add a new Indexer
+
+1. At the top, click Add Indexer.
+2. Type the name of the indexer you want to add
+3. Enter the appropriate details
+
+### Connect download clients
+
+First, navigate to the settings page in the sidebar, then click "Download Clients". Client specific info is available below. You may need to know your subnet to configure correctly. You may retrieve this by logging into your slot via ssh and entering the command `cat $HOME/.install/subnet.lock` or by going to the general menu in prowlarr, clicking "show advanced", then look at the bind address.
+
+import Clients from "../snippets/clients.mdx";
+
+<Clients />
+
+### Add Arrs
+
+Prowlarr supports Lidarr, Mylar3, Radarr, Readarr, and Sonarr. You may add these apps by navigating to the settings in Prowlarr.
+
+You need to know your subnet to configure correctly. Go to the Settings -> General menu in the arr, click "show advanced", then copy the bind address and port. To configure the app itself,
+
+1. Navigate to the settings page in Prowlarr, then select the Apps menu item.
+2. In the top left, click show advanced.
+3. Under "Applications", click the + button.
+4. Select the application you wish to sync your indexers to.
+5. Enter the subnet ip like the following for prowlarr:
+    - `http://subnet:port/prowlarr/
+6. Enter the subnet ip like the following for any of the supported apps you have installed via box:
+    - `http://subnet:port/appname/
+7. Repeat as neccesary.
