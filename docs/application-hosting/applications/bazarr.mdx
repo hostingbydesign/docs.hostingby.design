@@ -4,6 +4,9 @@ title: Bazarr
 sidebar_label: Bazarr
 ---
 
+import Subnet from '../snippets/subnet.mdx';
+import SystemdTabs from "../snippets/systemdtabs.mdx";
+
 Bazarr is a companion application to Sonarr and Radarr. It manages and downloads subtitles based on your requirements. You define your preferences by TV show or movie and Bazarr takes care of everything for you.
 
 ## Initial Setup
@@ -28,8 +31,6 @@ Once setup, bazarr will be available at the link `https://<hostname.io>/bazarr`
 ## Service Management
 
 Like all box configured applications, you can manage Bazarr via SSH with box with start, stop, restart, enable and disable commands.
-
-import SystemdTabs from "../snippets/systemdtabs.mdx";
 
 <SystemdTabs service="bazarr" />
 
@@ -69,14 +70,10 @@ Base URL: /radarr
 API Key: <radarr API>
 ```
 
+<Subnet/>
+
 :::tip Tip
-Forgot your subnet, API key or port? No worries, here are oneliners you can submit from SSH:
-
-Subnet:
-
-```bash
-cat ~/.install/subnet.lock
-```
+Forgot your API key or port? No worries, here are oneliners you can submit from SSH:
 
 Sonarr:
 
