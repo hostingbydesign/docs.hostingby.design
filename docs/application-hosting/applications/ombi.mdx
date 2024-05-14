@@ -4,6 +4,9 @@ title: Ombi
 sidebar_label: Ombi
 ---
 
+import Subnet from '../snippets/subnet.mdx';
+import SystemdTabs from "../snippets/systemdtabs.mdx";
+
 Ombi is a self-hosted web application that automatically gives your shared Plex or Emby users the ability to request content by themselves! Ombi can be linked to multiple TV Show and Movie DVR tools to create a seamless end-to-end experience for your users.
 
 ## Initial Setup
@@ -26,8 +29,6 @@ After installation, Ombi will be availabe at the following web address: `https:/
 
 Like all box configured applications, you can manage Ombi via SSH with box with start, stop, restart, enable and disable commands.
 
-import SystemdTabs from "../snippets/systemdtabs.mdx";
-
 <SystemdTabs service="ombi" />
 
 ## Configuration
@@ -38,11 +39,9 @@ If you have further questions about settings and configurations of Ombi, please 
 
 ## Connect to other clients
 
-> To get your subnet IP, SSH into your server and run `cat .install/subnet.lock`
+<Subnet />
 
 ### Sonarr
-
-:::panel
 
 1. Select Sonarr from the TV Dropdown under settings.
 2. In order to configure Sonarr, you must first have a root folder setup. If you haven't set up any root folders in Sonarr, please add a show and setup your Sonarr root show directory first.
@@ -60,11 +59,7 @@ Base URL: sonarr
 5. Choose your default quality and folder settings for shows added through Ombi.
 6. Submit
 
-:::
-
 ### Medusa
-
-:::panel
 
 1. Select SickRage from the TV Dropdown under settings.
 2. Use the following configuration:
@@ -79,11 +74,8 @@ Base URL: medusa
 
 3. Choose a default quality profile.
 4. Submit
-   :::
 
 ### Radarr
-
-:::panel
 
 1. Select Radarr from the Movie Dropdown under settings.
 2. In order to configure Radarr, you must first have a root folder setup. If you haven't set up any root folders in Radarr, please add a show and setup your Sonarr root show directory first.
@@ -100,9 +92,3 @@ Base URL: radarr
 4. Click `Load Qualities` and `Load Folders`. Your settings should load successfully.
 5. Choose your default quality and folder settings for Movies added through Ombi.
 6. Submit
-
-:::
-
-:::tip
-In order to connect Ombi to the clients above, you'll need your subnet IP. You can find this on your panel or with the command `cat ~/.install/subnet.lock`
-:::

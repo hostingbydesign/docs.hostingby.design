@@ -50,8 +50,6 @@ Wireguard is available on many platforms. Setting it up for use with your Hostin
 
 #### Linux / OS X
 
-:::panel
-
 1. Simply copy-paste the configuration file outputted at the end of the server setup into a file in /etc/wireguard.
 
 ```bash
@@ -69,22 +67,16 @@ sudo wg-quick up wg0
 sudo systemctl enable wg-quick@wg0
 ```
 
-:::
-
 #### Windows
-
-:::panel
 
 1. Copy-paste the contents of the client configuration outputted at the end of configuration into a file onto your local desktop,eg: `HostingByDesign.conf.d`
 
 2. Open TunSafe, click and drag the configuration file you just created to the TunSafe window. TunSafe will automatically import the client configuration and connect. Easy!
 
 3. [Check your IP Address](https://duckduckgo.com/?q=ip+address&ia=answer). It should now reflect your shared or dedicated IP for your slot.
-   :::
 
 #### Android
 
-:::panel
 Configuration is easiest if you use utilize the QR Encode function.
 
 1. Connect to your server from a computer and issue the commands:
@@ -97,11 +89,9 @@ qrencode -t ansiutf8 < ~/.wireguard/$u.conf
 2. In your client on your phone, add a new tunnel and chose the `QR Code` option. Scan the QR code which was generated in your terminal.
 3. Enable the tunnel by ticking the switch.
 4. [Check your IP Address](https://duckduckgo.com/?q=ip+address&ia=answer).
-   :::
 
 #### iOS
 
-:::panel
 Configuration is easiest if you use utilize the QR Encode function.
 
 1. Connect to your server from a computer and issue the commands:
@@ -114,7 +104,6 @@ qrencode -t ansiutf8 < ~/.wireguard/$u.conf
 2. In your client on your phone, add a new tunnel and chose the `QR Code` option. Scan the QR code which was generated in your terminal.
 3. Enable the tunnel by ticking the switch.
 4. [Check your IP Address](https://duckduckgo.com/?q=ip+address&ia=answer).
-   :::
 
 ## Service Management
 
