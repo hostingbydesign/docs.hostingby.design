@@ -93,5 +93,18 @@ module.exports = {
         },
       ],
     },
+    {
+      type: "category",
+      label: "VPS Hosting",
+      collapsed: true,
+      items: [
+        {
+          "Getting Started": [
+            "vps-hosting/abuse",
+            "vps-hosting/bandwidth",
+          ],
+        },
+      ],
+    },
   ],
 };
