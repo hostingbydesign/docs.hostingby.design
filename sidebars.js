@@ -101,7 +101,7 @@ module.exports = {
         {
           "Getting Started": [
             "vps-hosting/abuse",
-            "vps-hosting/bandwidth",
+            "vps-hosting/fair-use-policy",
           ],
         },
       ],
