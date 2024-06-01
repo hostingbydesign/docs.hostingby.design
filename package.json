@@ -23,13 +23,12 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.3.2"
+    "@docusaurus/module-type-aliases": "3.3.2",
     "@docusaurus/types": "3.0.0"
   },
   "engines": {
-    // require Node.js 18.0+
     "node": ">=18.0"
-  }
+  },
   "browserslist": {
     "production": [
       ">0.5%",
