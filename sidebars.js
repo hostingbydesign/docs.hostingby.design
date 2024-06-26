@@ -29,7 +29,7 @@ module.exports = {
             "application-hosting/getting-started/dashboard",
             "application-hosting/getting-started/box-basics",
             "application-hosting/getting-started/abuse",
-            "application-hosting/getting-started/bandwith",
+            "application-hosting/getting-started/bandwitdh",
             "application-hosting/getting-started/ftp-bouncer",
           ],
           "Applications (Official)": [
@@ -40,6 +40,7 @@ module.exports = {
             "application-hosting/applications/btsync",
             "application-hosting/applications/deluge",
             "application-hosting/applications/emby",
+            "application-hosting/applications/flaresolverr",
             "application-hosting/applications/jackett",
             "application-hosting/applications/jellyfin",
             "application-hosting/applications/lidarr",
