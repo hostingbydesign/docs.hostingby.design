@@ -72,6 +72,7 @@ module.exports = {
             "application-hosting/guides/systemd",
             "application-hosting/guides/network_userscript",
             "application-hosting/guides/migration",
+            "application-hosting/guides/rclone-mergerfs",
           ],
         },
       ],
