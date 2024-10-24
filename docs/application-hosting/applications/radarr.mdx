@@ -86,6 +86,19 @@ API: <copy and paste from jackett UI>
 
 4. Click `Test`. If all is good, click `Save`.
 
+### Radarr not working after update
+
+In some cases when Radarr is updated through the WebUI, you may encounter an issue where Radarr is not starting correctly. Thankfully there is an easy fix:
+
+:::
+
+1. Make sure you have a red dot next to Radarr in the Swizzin WebUI.
+2. Login via SSH and navigate `cd ~/.config/Radarr/` and copy the radarr.db with `cp radarr.db ~/`
+3. Go back into your home dir with `cd ~/` and then run `box remove radarr` and then `box install radarr`
+4. After Radarr is installed, go into the Swizzin WebUI and turn off Radarr with the Enabled switch, wait around 10-20 seconds for the Radarr instance to be completely turned off, noted by the Red Dot next to Radarr.
+5. Go back into the Radarr config folder with `cd ~/.config/Radarr` and remove the radarr.db, radarr.db-shm, radarr.db-wal and radarr.pid files with `rm radarr.db, radarr.db-shm, radarr.db-wal and radarr.pid`. Now navigate back to your home dir with `cd ~/` and copy over the backup of your .db file with `cp radarr.db ~/.config/Radarr/`
+6. Now you are free to turn on Radarr back from the switch in the Swizzin Panel.
+
 ### Other tasks
 
 You may wish to further alter your setup by setting quality profiles or setting up post-processing so that media is automatically transferred to your Radarr library when your torrents are completed. If you need further help, you can refer to the [Radarr Wiki](https://github.com/Radarr/Radarr/wiki).
