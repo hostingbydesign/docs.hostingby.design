@@ -90,8 +90,6 @@ API: <copy and paste from jackett UI>
 
 In some cases when Radarr is updated through the WebUI, you may encounter an issue where Radarr is not starting correctly. Thankfully there is an easy fix:
 
-:::
-
 1. Make sure you have a red dot next to Radarr in the Swizzin WebUI.
 2. Login via SSH and navigate `cd ~/.config/Radarr/` and copy the radarr.db with `cp radarr.db ~/`
 3. Go back into your home dir with `cd ~/` and then run `box remove radarr` and then `box install radarr`
