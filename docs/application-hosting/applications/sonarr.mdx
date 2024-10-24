@@ -88,6 +88,17 @@ API: <copy and paste from jackett UI>
 
 4. Click `Test`. If all is good, click `Save`.
 
+### Sonarr not working after update
+
+In some cases when Sonarr is updated through the WebUI, you may encounter an issue where Sonarr is not starting correctly. Thankfully there is an easy fix:
+
+1. Make sure you have a red dot next to Sonarr in the Swizzin WebUI.
+2. Login via SSH and navigate `cd ~/.config/Sonarr/` and copy the sonarr.db with `cp sonarr.db ~/`
+3. Go back into your home dir with `cd ~/` and then run `box remove sonarr` and then `box install sonarr`
+4. After Sonarr is installed, go into the Swizzin WebUI and turn off Sonarr with the Enabled switch, wait around 10-20 seconds for the Sonarr instance to be completely turned off, noted by the Red Dot next to Sonarr.
+5. Go back into the Sonarr config folder with `cd ~/.config/Sonarr` and remove the sonarr.db, sonarr.db-shm, sonarr.db-wal and sonarr.pid files with `rm sonarr.db, sonarr.db-shm, sonarr.db-wal and sonarr.pid`. Now navigate back to your home dir with `cd ~/` and copy over the backup of your .db file with `cp sonarr.db ~/.config/Sonarr/`
+6. Now you are free to turn on Sonarr back from the switch in the Swizzin Panel.
+
 ### Other tasks
 
 You may wish to further alter your setup by setting quality profiles or setting up post-processing so that media is automatically transferred to your Sonarr library when your torrents are completed. If you need further help, you can refer to the [Sonarr Wiki](https://github.com/Sonarr/Sonarr/wiki).
