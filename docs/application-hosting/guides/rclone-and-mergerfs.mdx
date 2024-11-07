@@ -78,7 +78,7 @@ RequiresMountsFor=/home/USER/media/shared-drives/drive-01
 [Service]
 Type=forking
 
-ExecStart=/usr/bin/mergerfs /home/USER/media/local:/home/USER/media/shared-drives/drive-01:/home/USER/media/shared-drives/drive-02:/home/USER/media/shared-drives/drive-03:/home/USER/media/shared-drives/drive-04: /home/USER/media/merged -o rw,use_ino,allow_other,func.getattr=newest,category.action=all,category.create=ff,cache.files=auto-full
+ExecStart=/usr/bin/mergerfs /home/USER/media/local:/home/USER/media/shared-drives/drive-01 /home/USER/media/merged -o rw,use_ino,allow_other,func.getattr=newest,category.action=all,category.create=ff,cache.files=auto-full
 ExecStop=/bin/fusermount3 -uz /home/USER/media/merged
 Restart=on-failure
 
