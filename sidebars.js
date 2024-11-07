@@ -12,6 +12,7 @@ module.exports = {
         "pre-sales/payment-methods",
         "pre-sales/notes-cc",
         "pre-sales/refund",
+        "pre-sales/promo-codes",
         "pre-sales/switching",
         "pre-sales/dedicated-ip",
         "pre-sales/data-retention-policy",
