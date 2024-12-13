@@ -6,10 +6,9 @@ sidebar_label: Home
 
 ## Introduction
 
-In our documentation you'll find guides on how to use our services - We aim to make our guides/documentation as easy to use/read/follow as possible ensuring everyone can benefit from it
-On the left you'll find a section for each possible step, please note that we aim to make disclaimers in all unofficial documentation, unofficial as in the guide details the usage of applications
-our support team does not provide support for - Our support is limited to the guide.
-Anything officially support will have support for issues related to the program - Please read this page for our support scope: [here](/pre-sales/support-scope.mdx).
+In our documentation you'll find guides on how to use our services - We aim to make our guides/documentation as easy to use/read/follow as possible ensuring everyone can benefit from it.
+On the left you'll find a section for each possible step. Please note that we aim to make disclaimers in all unofficial documentation, unofficial as in the guide details the usage of applications that our team does not provide support for - Our support is limited to the guide.
+Anything officially supported will have support for issues related to the program - Please read this page for our support scope: [here](/pre-sales/support-scope.mdx).
 
 ## Need further help?
 
