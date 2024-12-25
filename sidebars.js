@@ -74,6 +74,7 @@ module.exports = {
             "application-hosting/guides/network_userscript",
             "application-hosting/guides/migration",
             "application-hosting/guides/rclone-mergerfs",
+            "application-hosting/guides/nodejs",
           ],
         },
       ],
