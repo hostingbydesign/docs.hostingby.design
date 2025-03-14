@@ -1,0 +1,35 @@
+---
+id: lounge
+title: The Lounge
+sidebar_label: Lounge
+---
+
+The Lounge is self-hosted web IRC client for the modern world.
+
+## Initial Setup
+First you must connect to your slot via ssh. If you need help connecting to the server, please read the help article [here](../getting-started/how-do-i-connect.md).
+
+Installing The Lounge on your slot is easy. Simply issue the following command:
+
+```plaintext main
+box install lounge
+```
+Installation will take a few moments. Once it's done, you'll receive a notice that the installation is complete and the installer will let you know where you can access the application. For example: `https://app02.hostingby.design/thelounge`.
+A link to access the application will also appear in your Swizzin Panel.
+
+:::tip Upgrading
+Upgrading your The Lounge instance is a simple process, login to the webui/dashboard we provide for your service, find the "Service info" section in the page you are presented with, from there simply click "Restart" next to The Lounge, that will restart the app and also check for updates, please note that we are usually 2-3 days behind on updates!
+:::
+
+## How to Access
+You can access The Lounge by clicking the link in your Swizzin Panel. If you require the personalized port The Lounge runs for you, you can get it with this command:
+`cat ~/.install/.lounge.lock`
+
+## Service Management
+
+Like all box configured applications, you can manage The Lounge via SSH with box with start, stop, restart, enable and disable commands.
+
+import SystemdTabs from "../snippets/systemdtabs.mdx";
+
+<SystemdTabs service="lounge" />
+
