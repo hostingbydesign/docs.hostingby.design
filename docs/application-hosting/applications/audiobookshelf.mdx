@@ -1,0 +1,49 @@
+---
+id: audiobookshelf
+title: Audiobookshelf
+sidebar_label: audiobookshelf
+---
+
+Audiobookshelf is a media server designed for Audio books and to access them anywhere. 
+
+## Initial Setup
+First you must connect to your slot via ssh. If you need help connecting to the server, please read the help article [here](../getting-started/how-do-i-connect.md).
+
+After you have successfully SSH'd into your service, all you need to do is type this command to install the application:
+```plaintext main
+box install audiobookshelf
+```
+It will take a minute or two to install, after which you will see a message stating that the app has been installed and where you can access the application, and the link to the app will appear in your Swizzin panel.
+
+:::tip Upgrading
+Upgrading the Audiobookshelf installation is a simple process, login to the webui/dashboard we provide for your service, find the "Service info" section in the page you are presented with, from there simply click "Restart" next to audiobookshelf, that will restart the app and also check for updates, please note that we are usually 2-3 days behind on updates!
+:::
+
+## How to Access
+You can access Audiobookshelf from your Swizzin panel by clicking the link labeled Audiobookshelf.  
+:::tip Tip
+If you forgot your personalized port, you can check it with at `cat ~/.install/.audiobookshelf.lock` 
+:::
+
+## Configuration
+
+Upon your first login you will be asked to select a Username and Password to use to access Audiobookshelf. **It is best to use the same username and password you use to access Swizzin/your slot**. There is no need to change the Directory Paths!
+After setting the username/password, you can login to your instance and add a Library by clicking the Add Library button.
+**Your slots Home Folder can be accessed under data/**
+
+## Service Management
+
+Like all box configured applications, you can manage Audiobookshelf via SSH with box with start, stop, restart, enable and disable commands.
+
+import SystemdTabs from "../snippets/systemdtabs.mdx";
+
+<SystemdTabs service="audiobookshelf" />
+
+## Connect to other clients
+
+If you need to link your Audiobookshelf instance to another application, you can use the following details:
+
+```plaintext main
+Host: 127.0.0.1
+Port: <your audiobookshelf port>
+```
