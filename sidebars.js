@@ -35,6 +35,7 @@ module.exports = {
           ],
           "Applications (Official)": [
             "application-hosting/applications/application-basics",
+            "application-hosting/applications/audiobookshelf",
             "application-hosting/applications/autobrr",
             "application-hosting/applications/autodl",
             "application-hosting/applications/bazarr",
@@ -45,6 +46,7 @@ module.exports = {
             "application-hosting/applications/jackett",
             "application-hosting/applications/jellyfin",
             "application-hosting/applications/lidarr",
+            "application-hosting/applications/lounge",
             "application-hosting/applications/medusa",
             "application-hosting/applications/nzbget",
             "application-hosting/applications/ombi",
