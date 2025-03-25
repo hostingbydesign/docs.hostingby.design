@@ -1,0 +1,36 @@
+---
+id: filebrowser
+title: Filebrowser
+sidebar_label: filebrowser
+---
+
+Filebrowser provides a file managing interface within a specified directory and it can be used to upload, delete, preview, rename and edit your files right from your browser.
+
+## Initial Setup
+First you must connect to your slot via ssh. If you need help connecting to the server, please read the help article [here](../getting-started/how-do-i-connect.md).
+
+After you have successfully SSH'd into your service, all you need to do is type this command to install the application:
+```plaintext main
+box install filebrowser
+```
+It will take a minute or two to install, after which you will see a message stating that the app has been installed and a link where you can access the application, and the link to the app will also appear in your Swizzin panel.
+
+:::caution Updates to Filebrowser will be handled by support and will lag behind a bit due to us needing to verify functionality before pushing updates out.
+:::
+
+## How to Access
+You can access Filebrowser from your Swizzin panel by clicking the link labeled Filebrowser.  This will log you into the Filebrowser app in your browser.
+
+## Configuration
+There's very little to configure in Filebrowser after installation. It will use the same credentials as your slot uses for logging in, and upon your first login, you can proceed to manage your files and folders.
+Only thing to really note, is that due to it being introduced as an official app, it means it's protected via the same credentials/login method as Swizzin, so if you share a download link to a file to someone, you also need to include the credentials to your slot. 
+To get around this, you can still install the community version from [here](https://github.com/brettpetch/hosted-scripts) which does not have this limitation.
+
+## Service Management
+Like all box configured applications, you can manage Filebrowser via SSH with box with start, stop, restart, enable and disable commands.
+
+import SystemdTabs from "../snippets/systemdtabs.mdx";
+
+<SystemdTabs service="filebrowser" />
+
+If you have suggestions or corrections to the documentation, please do not hesitate to let us know!
