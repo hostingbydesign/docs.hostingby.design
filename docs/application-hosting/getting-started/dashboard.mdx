@@ -23,8 +23,9 @@ On the left side of the dashboard, you'll find quick links to the currently inst
 The dashboard provides metrics for server load, CPU usage, and the current network metrics for upload and download speeds.
 
 :::tip
-The dashboard might indicate high load %'s, in most cases it's normal and not a reason to worry unless your performance is being affected. As a customer you only need to worry about disk utilization whic you can check with:
+The dashboard might indicate high load percentages. Whether this affects you or not depends on whether your drive is busy (high disk utilization) or not. You can check the drive load with:
 ```iostat -xm 5 $(findmnt $HOME | awk '{ print $2 }' | tail -n1 | cut -d[ -f1)```
+The figure you're looking for will be the one at the far right.
 :::
 
 ### Personal Usage Statistics
