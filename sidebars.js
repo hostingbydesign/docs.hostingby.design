@@ -62,6 +62,7 @@ module.exports = {
             "application-hosting/applications/wireguard",
           ],
           "Applications (Community)": [
+            "application-hosting/community-applications/community-basics",
             "application-hosting/community-applications/overseerr",
           ],
           "Guides (How To's)": [
