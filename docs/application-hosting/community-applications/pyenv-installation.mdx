@@ -1,1 +1,44 @@
+---
+id: pyenv-installation
+title: pyenv Installation
+sidebar_label: pyenv Installation
+---
+import Community from "../snippets/community.mdx";
 
+pyenv lets you easily switch between multiple versions of Python. It's simple, unobtrusive, and follows the UNIX tradition of single-purpose tools that do one thing well.
+For more information on pyenv, see [github.com/pyenv/pyenv](https://github.com/pyenv/pyenv).
+
+## Installation
+Installation requires you to SSH into your server. If you need help with this, please refer to the [how do I connect](../getting-started/how-do-i-connect.md) article.
+
+1. Make a `tmp` folder in your home directory.
+```mkdir -p "$HOME/tmp" && export TMPDIR="$HOME/tmp"```
+2. Install pyenv
+```curl https://pyenv.run | bash```
+3. Add the following to your `~/.bashrc` file.
+```bash
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"```
+4. Reload your shell.
+```source ~/.bashrc```
+5. Install the python version you wish to have usable with pyenv.
+```pyenv install 3.12.0```
+6. Head to the directory where you wish to set the python version from the previous step to be usable in.
+```cd /path/to/directory```
+7. Set the directory pyenv version.
+```pyenv local 3.12.0```
+8. Create an environment in that directory.
+```pyenv virtualenv {environment-name}```
+9. Activate the environment.
+```pyenv activate {environment-name}```
+
+To get out of the environment, do:
+```pyenv deactivate.
+To view the list of environments, do:
+```pyenv virtualenvs```
+To uninstall a specific python version, do:
+```pyenv uninstall 3.12.0```
+To uninstall a specific environment, do:
+```pyenv uninstall {environment-name}```
