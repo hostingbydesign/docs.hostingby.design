@@ -1,0 +1,53 @@
+---
+id: community-basics
+title: Community Basics
+sidebar_label: Basics
+---
+In the following section, you can learn more about the applications offered by the community, how to install them and configure them for use with other applications.
+
+:::caution
+These installation scripts and their respective applications come with no support. You will not get help from HostingBy.Design support. If you have questions, feel free to reach out in our [Discord](https://discord.gg/StaAybe3rm) community support channel.
+:::
+## Directory
+A directory of installation scripts can be found on the [brettpetch/hosted-scripts](https://github.com/brettpetch/hosted-scripts) Github repo, along with a brief [wiki](https://github.com/brettpetch/hosted-scripts/wiki).
+## Installation
+Before any installation, please consider reading the installer script and checking if there is an existing [wiki entry](https://github.com/brettpetch/hosted-scripts/wiki) on the community wiki.
+
+Installation requires you to SSH into your server. If you need help with this, please refer to the [how do I connect](../getting-started/how-do-i-connect.md) article.
+Scripts can be run by getting the <ins>raw</ins> script's URL and running it as follows (replacing the current URL):
+```bash
+bash <(curl -sL https://github.com/brettpetch/hosted-scripts/raw/master/overseerr.sh)
+```
+:::tip
+If something goes wrong during your install, please consider checking the logs and the output in your console. You may find them by running the following (replacing _overseerr_ by your application name):
+```bash
+less -r +G ~/.logs/overseerr.log
+```
+These can be helpful in cases where you need to see the output from installation.
+:::
+
+Depending on the app, it might ask you to input credentials, specify versions, or other. Remember that some apps may be by default exposed to the public internet and you should add enable authentification on first run.
+
+## Controlling the Systemd Service
+Control over the application is possible as follows (replacing _overseerr_ by your application name):
+
+import UserSystemd from "../snippets/usersystemd.mdx";
+
+<UserSystemd service="overseerr" />
+
+## Troubleshooting
+For most troubleshooting, please consider consulting the respective application's documentation/wiki.
+:::warning
+Please be aware that unofficial apps are run with a self-signed certificate, which means your browser might give you an SSL error. Connection-wise it's equally secure, but your browser will still flag it as such. Only official apps can run with valid certificates.
+:::
+#### Viewing logs
+
+:::tip  
+For application specific logs, consider running the following(replacing _overseerr_ by your application name):
+
+```bash
+systemctl --user status overseerr
+```
+
+You can exit `less` by pressing `q` at any point.
+:::
