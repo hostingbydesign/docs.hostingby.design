@@ -42,6 +42,7 @@ module.exports = {
             "application-hosting/applications/btsync",
             "application-hosting/applications/deluge",
             "application-hosting/applications/emby",
+            "application-hosting/applications/filebrowser",
             "application-hosting/applications/flaresolverr",
             "application-hosting/applications/jackett",
             "application-hosting/applications/jellyfin",
