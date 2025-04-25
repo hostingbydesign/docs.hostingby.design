@@ -62,7 +62,9 @@ module.exports = {
             "application-hosting/applications/wireguard",
           ],
           "Applications (Community)": [
+            "application-hosting/community-applications/community-basics",
             "application-hosting/community-applications/overseerr",
+            "application-hosting/community-applications/pyenv-installation",
           ],
           "Guides (How To's)": [
             "application-hosting/guides/iplookup",
