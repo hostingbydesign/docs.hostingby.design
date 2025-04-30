@@ -78,6 +78,10 @@ If you skipped claiming of your Plex server during installation, you can still c
 
 If you've gotten this far, I'll assume you don't need any reminders on how to connect to the server via SSH ;) However, creating an SSH tunnel takes a bit more effort than simply creating an SSH Connection.
 
+:::tip Plex port
+To find your Plex port, you need to SSH into your slot and issue the command `cat ~/.install/.plex.lock`. This command will give you the Port Plex uses.
+:::
+
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
@@ -92,17 +96,19 @@ import TabItem from "@theme/TabItem";
 
 
     1. Open up your PuTTY client again.
-    2. Under gateway, enter the hostname of your server, e.g.: `yourhostname.ltd`
+    2. Under gateway, enter the hostname of your server, e.g.: `xx.lw/ein.itsby.design`
     3. Configure the tunnel:
         1. On the left hand side, navigate to `Connection > SSH > Tunnels`
         2. Under source port, enter 8888
         3. Login via SSH and issue this command without the quotes "cat ~/.install/.plex.lock"
-        4. Under destination, enter localhost:<plex-port> (plex-port is the number shown in step 3 with the command)
+        4. Under destination, enter: localhost:<plex-port> (plex-port is the number shown in step 3 with the command)
         5. Click `Add`
     4. Connect to the server by clicking `Open`
     5. PuTTY will prompt you for your username and password like a regular SSH session.
     6. Once connected, open your browser and navitage to http://localhost:8888/web
     7. The browser will connect to your Plex server and let you know that there is an unclaimed server on your network.
+    8. You will see a prompt asking you to setup a new server and library, or it will state you have an unclaimed server, which you can then proceed to claim to your account.
+    9. To check that it worked, just disconnect from the Plex tunnel by closing PuTTy and navigate to https://app.plex.tv and you will see your new Server there :)
 
   </TabItem>
   <TabItem value="linux">
