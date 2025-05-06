@@ -26,6 +26,8 @@ Please make sure to finish the setup of the application through the web browser,
 
 You can access jellyfin through `https://appxx.lw.hostingby.design/<yourusername>/jellyfin`.
 
+Beware, some users have reported that some applications/versions of the jellyfin apps require a trailing slash to work, so if you are using the above url and are having connection issue then please append a / at the end of the url.
+
 ## Library management
 
 By default, you home directory will be mounted in Jellyfin as `/data/`. There you will find all of the files from your home directory. If you setup an application like l3uddz autoscan with the *arrs, you may need to use a `rewrite rule` to replace `/home/username` with `/data`.
