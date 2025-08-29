@@ -4,9 +4,13 @@ title: Systemd (Startup) Services
 sidebar: Systemd Services
 ---
 
-For users asking for ways to start custom apps as services on boot or just more easily, I recommend `systemd --user` services for this job.
+For users asking for ways to run custom apps as services more easily, I recommend `systemd --user` services for this job.
 
-Systemd can be used in `user` mode without need to call sudo to make changes to service states.
+:::note
+Starting services automatically at boot time is not supported.
+:::
+
+Systemd can be used in `user` mode without need to call `sudo` to make changes to service states.
 
 User services can be stored like this:
 
