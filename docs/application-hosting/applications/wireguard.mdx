@@ -1,7 +1,7 @@
 ---
 id: wireguard
-title: Wireguard
-sidebar_label: Wireguard
+title: WireGuard
+sidebar_label: WireGuard
 ---
 
 WireGuard is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography
@@ -10,13 +10,13 @@ WireGuard is an extremely simple yet fast and modern VPN that utilizes state-of-
 
 First you must connect to your slot via ssh. If you need help connecting to the server, please read the help article [here](../getting-started/how-do-i-connect.md).
 
-Installing wireguard is easy. Simply issue the following command:
+Installing WireGuard is easy. Simply issue the following command:
 
 ```plaintext main
 box install wireguard
 ```
 
-This command will configure wireguard for your user. When install finished, the installer will output the configuration for your user. This is an example configuration:
+This command will configure WireGuard for your user. When install finished, the installer will output the configuration for your user. This is an example configuration:
 
 ```plaintext main
 [Interface]
@@ -38,15 +38,15 @@ AllowedIPs = 0.0.0.0/0
 
 ### Client Install
 
-In order to use the Wireguard tunnel, you'll need to install the client on your local computer or mobile phone. In order to get started, please check the [Wireguard site](https://www.wireguard.com/install/) for help on installing Wireguard on the operating system of your choice.
+In order to use the WireGuard tunnel, you'll need to install the client on your local computer or mobile phone. In order to get started, please check the [WireGuard site](https://www.wireguard.com/install/) for help on installing WireGuard on the operating system of your choice.
 
 :::note
-If you prefer, and alternate client called [TunSafe](https://tunsafe.com/download) exists and is already a bit more mature than the official Wireguard client for Windows. **While the client itself is open-source and developed by a community member with prior credibility, it bears mentioning that using this client completely, 100% at your own risk as it is not developed or maintained by the Wireguard team. You have been warned.**
+If you prefer, and alternate client called [TunSafe](https://tunsafe.com/download) exists and is already a bit more mature than the official WireGuard client for Windows. **While the client itself is open-source and developed by a community member with prior credibility, it bears mentioning that using this client completely, 100% at your own risk as it is not developed or maintained by the WireGuard team. You have been warned.**
 :::
 
 ### Client Setup
 
-Wireguard is available on many platforms. Setting it up for use with your HostingByDesign configuration should be fairly straight-forward, but in case you need a littl help getting your client setup, here are some instructions for popular operating systems.
+WireGuard is available on many platforms. Setting it up for use with your HostingByDesign configuration should be fairly straight-forward, but in case you need a littl help getting your client setup, here are some instructions for popular operating systems.
 
 #### Linux / OS X
 
@@ -58,7 +58,7 @@ sudo chmod 600 /etc/wireguard/wg0.conf
 sudo wg-quick up wg0
 ```
 
-2. Wireguard should now be up and tunnelling all you traffic through HostingByDesign.
+2. WireGuard should now be up and tunnelling all you traffic through HostingByDesign.
 3. [Check your IP Address](https://duckduckgo.com/?q=ip+address&ia=answer). It should now reflect your shared or dedicated IP for your slot.
 
 4. On Linux systems, you can configure a systemd service to automatically run and enable this configuration on each boot:
@@ -107,7 +107,7 @@ qrencode -t ansiutf8 < ~/.wireguard/$u.conf
 
 ## Service Management
 
-Like all box configured applications, you can manage Wireguard via SSH with box with start, stop, restart, enable and disable commands.
+Like all box configured applications, you can manage WireGuard via SSH with box with start, stop, restart, enable and disable commands.
 
 import SystemdTabs from "../snippets/systemdtabs.mdx";
 
