@@ -4,7 +4,7 @@ title: WireGuard
 sidebar_label: WireGuard
 ---
 
-WireGuard is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography
+WireGuard is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography.
 
 ## Initial Setup
 
@@ -16,7 +16,7 @@ Installing WireGuard is easy. Simply issue the following command:
 box install wireguard
 ```
 
-This command will configure WireGuard for your user. When install finished, the installer will output the configuration for your user. This is an example configuration:
+This command will configure WireGuard for your user. After installation, the installer will output the configuration for your user. This is an example configuration:
 
 ```plaintext main
 [Interface]
@@ -41,16 +41,16 @@ AllowedIPs = 0.0.0.0/0
 In order to use the WireGuard tunnel, you'll need to install the client on your local computer or mobile phone. In order to get started, please check the [WireGuard site](https://www.wireguard.com/install/) for help on installing WireGuard on the operating system of your choice.
 
 :::note
-If you prefer, and alternate client called [TunSafe](https://tunsafe.com/download) exists and is already a bit more mature than the official WireGuard client for Windows. **While the client itself is open-source and developed by a community member with prior credibility, it bears mentioning that using this client completely, 100% at your own risk as it is not developed or maintained by the WireGuard team. You have been warned.**
+If you prefer, an alternate client called [TunSafe](https://tunsafe.com/download) exists and is already a bit more mature than the official WireGuard client for Windows. **While the client itself is open-source and developed by a community member with prior credibility, it bears mentioning that using this client is completely, 100% at your own risk as it is not developed or maintained by the WireGuard team. You have been warned.**
 :::
 
 ### Client Setup
 
-WireGuard is available on many platforms. Setting it up for use with your HostingByDesign configuration should be fairly straight-forward, but in case you need a littl help getting your client setup, here are some instructions for popular operating systems.
+WireGuard is available on many platforms. Setting it up for use with your HostingByDesign configuration should be fairly straightforward, but in case you need a little help getting your client setup, here are some instructions for popular operating systems.
 
 #### Linux / OS X
 
-1. Simply copy-paste the configuration file outputted at the end of the server setup into a file in /etc/wireguard.
+1. Simply copy-paste the configuration file outputted at the end of the server setup into a file in `/etc/wireguard`.
 
 ```bash
 sudo nano /etc/wireguard/wg0.conf
@@ -69,7 +69,7 @@ sudo systemctl enable wg-quick@wg0
 
 #### Windows
 
-1. Copy-paste the contents of the client configuration outputted at the end of configuration into a file onto your local desktop,eg: `HostingByDesign.conf.d`
+1. Copy-paste the contents of the client configuration outputted at the end of configuration into a file onto your local desktop, e.g.: `HostingByDesign.conf.d`
 
 2. Open TunSafe, click and drag the configuration file you just created to the TunSafe window. TunSafe will automatically import the client configuration and connect. Easy!
 
@@ -92,7 +92,7 @@ qrencode -t ansiutf8 < ~/.wireguard/$u.conf
 
 #### iOS
 
-Configuration is easiest if you use utilize the QR Encode function.
+Configuration is easiest if you use the QR Encode function.
 
 1. Connect to your server from a computer and issue the commands:
 
