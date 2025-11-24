@@ -36,6 +36,10 @@ By default, you home directory will be mounted in Jellyfin as `/data/`. There yo
 
 Jellyfin manages its users in a separate database. Please use the Web-UI to manage users and media.
 
+## Connection to *arrs
+
+Connecting Jellyfin to services like Radarr or Sonarr for requires the Jellyfin port, which can be checked with the following command: `cat ~/.install/.jellyfin.lock`. 
+
 ## Service management
 
 import SystemdTabs from "../snippets/systemdtabs.mdx";
