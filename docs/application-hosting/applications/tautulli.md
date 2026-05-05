@@ -13,7 +13,7 @@ First you must connect to your slot via ssh. If you need help connecting to the 
 Installing Tautulli is easy. Simply issue the following command:
 
 ```plaintext main
-box install plexpy
+box install tautulli
 ```
 
 This command will configure Tautulli for your user.
